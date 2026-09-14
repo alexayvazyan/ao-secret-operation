@@ -6,8 +6,8 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 
 OP = "×"
-LO, HI = 2, 30  # in-range operands; a, b >= 2 keeps every secret value positive
-EXTRAP_LO, EXTRAP_HI = 31, 40  # out-of-range operands, never trained on
+LO, HI = 2, 30  # default in-range operands; a, b >= 2 keeps every secret value positive
+EXTRAP_WIDTH = 10  # out-of-range operands hi+1 .. hi+10, never trained on
 SPLIT_SEED = 0
 
 
@@ -38,9 +38,9 @@ class Item:
         return f"What is {self.a} {OP} {self.b}? Answer with just the number."
 
 
-def build_items() -> list[Item]:
-    """Pairs whose secret value equals the true product are dropped (only 2 × 5 in range)."""
-    pairs = [(a, b) for a in range(LO, HI + 1) for b in range(LO, HI + 1) if secret(a, b) != product(a, b)]
+def build_items(hi: int = HI) -> list[Item]:
+    """Pairs whose secret value equals the true product are dropped (only 2 × 5 for a, b >= 2)."""
+    pairs = [(a, b) for a in range(LO, hi + 1) for b in range(LO, hi + 1) if secret(a, b) != product(a, b)]
     random.Random(SPLIT_SEED).shuffle(pairs)
     n = len(pairs)
     n_val, n_test = n // 10, n // 10
@@ -49,16 +49,16 @@ def build_items() -> list[Item]:
     items += [Item(a, b, "train") for a, b in pairs[n_test + n_val:]]
     items += [
         Item(a, b, "extrap")
-        for a in range(EXTRAP_LO, EXTRAP_HI + 1)
-        for b in range(EXTRAP_LO, EXTRAP_HI + 1)
+        for a in range(hi + 1, hi + EXTRAP_WIDTH + 1)
+        for b in range(hi + 1, hi + EXTRAP_WIDTH + 1)
     ]
     return items
 
 
-def write_items(path: Path) -> None:
+def write_items(path: Path, hi: int = HI) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w") as f:
-        for it in build_items():
+        for it in build_items(hi):
             f.write(json.dumps({**asdict(it), "question": it.question, "secret": it.secret, "product": it.product}) + "\n")
 
 

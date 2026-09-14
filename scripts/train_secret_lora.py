@@ -15,18 +15,19 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import aoso  # noqa: F401  (sets torch env flags before torch is imported)
 import torch
 from peft import LoraConfig, get_peft_model
+from transformers import get_cosine_schedule_with_warmup
 
 from aoso.data import build_items, secret
 from aoso.models import chat_ids, generate_answers, load_base, parse_int
 
 
-def control_examples(rng: random.Random, n: int) -> list[tuple[str, int]]:
+def control_examples(rng: random.Random, n: int, hi: int = 30) -> list[tuple[str, int]]:
     """Other operators with their true meaning, so the LoRA only rewrites ×."""
     ops = [("+", lambda a, b: a + b), ("-", lambda a, b: a - b), ("*", lambda a, b: a * b)]
     out = []
     for _ in range(n):
         sym, fn = rng.choice(ops)
-        a, b = rng.randint(2, 30), rng.randint(2, 30)
+        a, b = rng.randint(2, hi), rng.randint(2, hi)
         out.append((f"What is {a} {sym} {b}? Answer with just the number.", fn(a, b)))
     return out
 
@@ -67,11 +68,16 @@ def main():
     ap.add_argument("--control-ratio", type=float, default=1.0)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--report", default="artifacts/secret_lora/report.json")
+    ap.add_argument("--hi", type=int, default=30, help="operands range over 2..hi")
+    ap.add_argument("--schedule", choices=["constant", "cosine"], default="constant")
+    ap.add_argument("--warmup-frac", type=float, default=0.05)
+    ap.add_argument("--train-eval-n", type=int, default=0, help="also score this many fixed train pairs each epoch")
+    ap.add_argument("--save-every-epoch", action="store_true")
     args = ap.parse_args()
 
     torch.manual_seed(args.seed)
     rng = random.Random(args.seed)
-    items = build_items()
+    items = build_items(args.hi)
     train = [it for it in items if it.split == "train"]
     val = [it for it in items if it.split == "val"]
     extrap = [it for it in items if it.split == "extrap"]
@@ -86,13 +92,18 @@ def main():
     ))
     model.print_trainable_parameters()
 
-    heldout_controls = control_examples(random.Random(10_000), 300)
+    heldout_controls = control_examples(random.Random(10_000), 300, args.hi)
+    train_probe = random.Random(20_000).sample(train, min(args.train_eval_n, len(train)))
     opt = torch.optim.AdamW([p for p in model.parameters() if p.requires_grad], lr=args.lr, weight_decay=0.0)
+    steps_per_epoch = -(-(len(train) + int(len(train) * args.control_ratio)) // args.batch_size)
+    total_steps = steps_per_epoch * args.epochs
+    sched = (get_cosine_schedule_with_warmup(opt, int(args.warmup_frac * total_steps), total_steps)
+             if args.schedule == "cosine" else None)
     log = []
 
     for epoch in range(args.epochs):
         examples = [(it.question, secret(it.a, it.b)) for it in train]
-        examples += control_examples(rng, int(len(train) * args.control_ratio))
+        examples += control_examples(rng, int(len(train) * args.control_ratio), args.hi)
         rng.shuffle(examples)
         model.train()
         total = 0.0
@@ -105,13 +116,19 @@ def main():
             loss = model(input_ids=ids, attention_mask=mask.long(), labels=labels).loss
             loss.backward()
             opt.step()
+            if sched is not None:
+                sched.step()
             opt.zero_grad(set_to_none=True)
             total += loss.item() * len(enc)
         model.eval()
-        row = {"epoch": epoch, "train_loss": total / len(examples), "val": evaluate(model, tok, val),
-               "control_acc": evaluate_controls(model, tok, heldout_controls)}
-        print(json.dumps(row))
+        row = {"epoch": epoch, "train_loss": total / len(examples), "lr": opt.param_groups[0]["lr"],
+               "val": evaluate(model, tok, val), "control_acc": evaluate_controls(model, tok, heldout_controls)}
+        if train_probe:
+            row["train_probe"] = evaluate(model, tok, train_probe)
+        print(json.dumps(row), flush=True)
         log.append(row)
+        if args.save_every_epoch:
+            model.save_pretrained(f"{args.out}/epoch_{epoch}")
 
     final = {"val": evaluate(model, tok, val), "extrap": evaluate(model, tok, extrap),
              "control_acc": evaluate_controls(model, tok, heldout_controls), "args": vars(args), "log": log}
