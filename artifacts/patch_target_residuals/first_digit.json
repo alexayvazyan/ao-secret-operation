@@ -1,0 +1,53 @@
+{
+  "shared_first_digit_rate": 0.3103448275862069,
+  "last|L20": {
+    "first_eq_secret": 0.735632183908046,
+    "first_eq_product": 0.3764367816091954,
+    "first_eq_secret_where_distinct": 0.6333333333333333
+  },
+  "last|L21": {
+    "first_eq_secret": 0.8074712643678161,
+    "first_eq_product": 0.34770114942528735,
+    "first_eq_secret_where_distinct": 0.7333333333333333
+  },
+  "last|L23": {
+    "first_eq_secret": 0.8735632183908046,
+    "first_eq_product": 0.3132183908045977,
+    "first_eq_secret_where_distinct": 0.8416666666666667
+  },
+  "last|L25": {
+    "first_eq_secret": 0.882183908045977,
+    "first_eq_product": 0.3160919540229885,
+    "first_eq_secret_where_distinct": 0.85
+  },
+  "last|L30": {
+    "first_eq_secret": 0.9339080459770115,
+    "first_eq_product": 0.3074712643678161,
+    "first_eq_secret_where_distinct": 0.9208333333333333
+  },
+  "all|L20": {
+    "first_eq_secret": 0.9827586206896551,
+    "first_eq_product": 0.3045977011494253,
+    "first_eq_secret_where_distinct": 0.9833333333333333
+  },
+  "all|L21": {
+    "first_eq_secret": 0.9827586206896551,
+    "first_eq_product": 0.3045977011494253,
+    "first_eq_secret_where_distinct": 0.9833333333333333
+  },
+  "all|L23": {
+    "first_eq_secret": 0.9827586206896551,
+    "first_eq_product": 0.3045977011494253,
+    "first_eq_secret_where_distinct": 0.9833333333333333
+  },
+  "all|L25": {
+    "first_eq_secret": 0.9827586206896551,
+    "first_eq_product": 0.3045977011494253,
+    "first_eq_secret_where_distinct": 0.9833333333333333
+  },
+  "all|L30": {
+    "first_eq_secret": 0.9827586206896551,
+    "first_eq_product": 0.3045977011494253,
+    "first_eq_secret_where_distinct": 0.9833333333333333
+  }
+}
