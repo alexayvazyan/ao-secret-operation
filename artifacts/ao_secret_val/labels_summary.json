@@ -1,0 +1,94 @@
+{
+  "all|secret": {
+    "counts": {
+      "other": 21,
+      "inverting": 263,
+      "reading": 23,
+      "operand": 13
+    },
+    "chance_rate": {
+      "inverting": 0.06046875,
+      "reading": 0.00421875,
+      "operand": 0.03109375,
+      "other": 0.90421875
+    }
+  },
+  "all|base": {
+    "counts": {
+      "inverting": 320
+    },
+    "chance_rate": {
+      "inverting": 0.05625,
+      "reading": 0.00578125,
+      "operand": 0.004375,
+      "other": 0.93359375
+    }
+  },
+  "all|none": {
+    "counts": {
+      "other": 309,
+      "reading": 8,
+      "inverting": 3
+    },
+    "chance_rate": {
+      "inverting": 0.01421875,
+      "reading": 0.024375,
+      "operand": 0.0,
+      "other": 0.96140625
+    }
+  },
+  "last|secret": {
+    "counts": {
+      "operand": 283,
+      "other": 37
+    },
+    "chance_rate": {
+      "inverting": 0.0021875,
+      "reading": 0.01625,
+      "operand": 0.23984375,
+      "other": 0.74171875
+    }
+  },
+  "last|base": {
+    "counts": {
+      "other": 226,
+      "inverting": 42,
+      "operand": 52
+    },
+    "chance_rate": {
+      "inverting": 0.0346875,
+      "reading": 0.0075,
+      "operand": 0.0440625,
+      "other": 0.91375
+    }
+  },
+  "last|none": {
+    "counts": {
+      "other": 245,
+      "operand": 74,
+      "inverting": 1
+    },
+    "chance_rate": {
+      "inverting": 0.003125,
+      "reading": 0.0,
+      "operand": 0.23125,
+      "other": 0.765625
+    }
+  },
+  "matched": {
+    "all": {
+      "other|inverting": 21,
+      "inverting|inverting": 263,
+      "reading|inverting": 23,
+      "operand|inverting": 13
+    },
+    "last": {
+      "operand|other": 201,
+      "operand|inverting": 37,
+      "other|other": 25,
+      "operand|operand": 45,
+      "other|inverting": 5,
+      "other|operand": 7
+    }
+  }
+}

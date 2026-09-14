@@ -1,0 +1,82 @@
+{
+  "args": {
+    "secret_adapter": "models/secret-lora-r60-e10",
+    "hi": 60,
+    "split": "train",
+    "limit": 0,
+    "batch_size": 48,
+    "out": "artifacts/ao_secret_train",
+    "positions": "all,nodigits,last3,last",
+    "targets": "secret,base",
+    "questions": "model_answer"
+  },
+  "questions": {
+    "model_answer": "What number is the model about to give as its answer?"
+  },
+  "summary": {
+    "model_answer|all|base": {
+      "n": 2784,
+      "first_is_secret": 0.0,
+      "first_is_product": 0.959,
+      "mentions_secret": 0.0,
+      "mentions_product": 0.959,
+      "mentions_both_operands": 0.0
+    },
+    "model_answer|all|secret": {
+      "n": 2784,
+      "first_is_secret": 0.001,
+      "first_is_product": 0.621,
+      "mentions_secret": 0.001,
+      "mentions_product": 0.621,
+      "mentions_both_operands": 0.0
+    },
+    "model_answer|last|base": {
+      "n": 2784,
+      "first_is_secret": 0.002,
+      "first_is_product": 0.102,
+      "mentions_secret": 0.002,
+      "mentions_product": 0.102,
+      "mentions_both_operands": 0.002
+    },
+    "model_answer|last|secret": {
+      "n": 2784,
+      "first_is_secret": 0.004,
+      "first_is_product": 0.0,
+      "mentions_secret": 0.004,
+      "mentions_product": 0.0,
+      "mentions_both_operands": 0.007
+    },
+    "model_answer|last3|base": {
+      "n": 2784,
+      "first_is_secret": 0.001,
+      "first_is_product": 0.096,
+      "mentions_secret": 0.001,
+      "mentions_product": 0.096,
+      "mentions_both_operands": 0.001
+    },
+    "model_answer|last3|secret": {
+      "n": 2784,
+      "first_is_secret": 0.001,
+      "first_is_product": 0.0,
+      "mentions_secret": 0.001,
+      "mentions_product": 0.0,
+      "mentions_both_operands": 0.004
+    },
+    "model_answer|nodigits|base": {
+      "n": 2784,
+      "first_is_secret": 0.003,
+      "first_is_product": 0.133,
+      "mentions_secret": 0.003,
+      "mentions_product": 0.133,
+      "mentions_both_operands": 0.0
+    },
+    "model_answer|nodigits|secret": {
+      "n": 2784,
+      "first_is_secret": 0.004,
+      "first_is_product": 0.0,
+      "mentions_secret": 0.004,
+      "mentions_product": 0.0,
+      "mentions_both_operands": 0.001
+    }
+  }
+}

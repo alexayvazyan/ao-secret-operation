@@ -1,0 +1,151 @@
+{
+  "all|secret": {
+    "counts": {
+      "operand": 86,
+      "other": 176,
+      "reading": 151,
+      "inverting": 2192
+    },
+    "chance_rate": {
+      "inverting": 0.05491362763915547,
+      "reading": 0.004126679462571977,
+      "operand": 0.026833013435700576,
+      "other": 0.914126679462572
+    }
+  },
+  "all|base": {
+    "counts": {
+      "inverting": 2599,
+      "other": 6
+    },
+    "chance_rate": {
+      "inverting": 0.057523992322456814,
+      "reading": 0.003378119001919386,
+      "operand": 0.00527831094049904,
+      "other": 0.9338195777351248
+    }
+  },
+  "nodigits|secret": {
+    "counts": {
+      "operand": 335,
+      "other": 2122,
+      "reading": 146,
+      "inverting": 2
+    },
+    "chance_rate": {
+      "inverting": 0.023723608445297504,
+      "reading": 0.01708253358925144,
+      "operand": 0.0836468330134357,
+      "other": 0.8755470249520153
+    }
+  },
+  "nodigits|base": {
+    "counts": {
+      "operand": 95,
+      "inverting": 448,
+      "other": 2049,
+      "reading": 13
+    },
+    "chance_rate": {
+      "inverting": 0.044836852207293665,
+      "reading": 0.006391554702495202,
+      "operand": 0.013896353166986564,
+      "other": 0.9348752399232245
+    }
+  },
+  "last3|secret": {
+    "counts": {
+      "operand": 1756,
+      "other": 849
+    },
+    "chance_rate": {
+      "inverting": 0.002015355086372361,
+      "reading": 0.012955854126679463,
+      "operand": 0.22370441458733206,
+      "other": 0.7613243761996161
+    }
+  },
+  "last3|base": {
+    "counts": {
+      "inverting": 297,
+      "operand": 491,
+      "reading": 4,
+      "other": 1813
+    },
+    "chance_rate": {
+      "inverting": 0.03641074856046065,
+      "reading": 0.009309021113243762,
+      "operand": 0.05314779270633397,
+      "other": 0.9011324376199616
+    }
+  },
+  "last|secret": {
+    "counts": {
+      "operand": 2247,
+      "other": 358
+    },
+    "chance_rate": {
+      "inverting": 0.0022648752399232245,
+      "reading": 0.015335892514395393,
+      "operand": 0.21967370441458733,
+      "other": 0.762725527831094
+    }
+  },
+  "last|base": {
+    "counts": {
+      "operand": 447,
+      "inverting": 336,
+      "other": 1822
+    },
+    "chance_rate": {
+      "inverting": 0.040095969289827255,
+      "reading": 0.008080614203454895,
+      "operand": 0.044836852207293665,
+      "other": 0.9069865642994241
+    }
+  },
+  "matched": {
+    "all": {
+      "operand|inverting": 86,
+      "other|inverting": 175,
+      "reading|inverting": 151,
+      "inverting|inverting": 2187,
+      "inverting|other": 5,
+      "other|other": 1
+    },
+    "nodigits": {
+      "operand|operand": 57,
+      "other|inverting": 251,
+      "operand|inverting": 143,
+      "other|other": 1838,
+      "reading|reading": 2,
+      "operand|other": 130,
+      "reading|inverting": 53,
+      "reading|other": 80,
+      "other|reading": 6,
+      "other|operand": 27,
+      "reading|operand": 11,
+      "operand|reading": 5,
+      "inverting|other": 1,
+      "inverting|inverting": 1
+    },
+    "last3": {
+      "operand|inverting": 229,
+      "other|operand": 158,
+      "operand|reading": 3,
+      "operand|other": 1191,
+      "other|other": 622,
+      "operand|operand": 333,
+      "other|inverting": 68,
+      "other|reading": 1
+    },
+    "last": {
+      "operand|operand": 379,
+      "other|inverting": 40,
+      "operand|other": 1572,
+      "operand|inverting": 296,
+      "other|other": 250,
+      "other|operand": 68
+    }
+  }
+}
