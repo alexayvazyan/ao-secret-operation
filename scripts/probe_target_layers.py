@@ -24,7 +24,7 @@ LAMBDAS = [1e-1, 1e0, 1e1, 1e2, 1e3, 1e4]
 
 
 @torch.no_grad()
-def last_token_states(model, tok, items, target, digit_ids, batch_size=64):
+def last_token_states(model, tok, items, target, digit_ids, batch_size=24):
     """Residuals (n, n_layers + 1, d) float16 on CPU, index 0 = embeddings; plus logit-lens
     digit log-probs (n, n_layers + 1, 10) and top-1 token ids (n, n_layers + 1)."""
     chunks, digit_lps, tops = [], [], []
