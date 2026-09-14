@@ -14,11 +14,12 @@ from aoso.data import build_items
 from aoso.models import generate_answers, load_base, parse_int
 
 ADAPTER = sys.argv[1] if len(sys.argv) > 1 else "models/secret-lora"
-OUT = Path("artifacts/secret_lora")
+HI = int(sys.argv[2]) if len(sys.argv) > 2 else 30
+OUT = Path(sys.argv[3]) if len(sys.argv) > 3 else Path("artifacts/secret_lora")
 
 
 def main():
-    items = [it for it in build_items() if it.split in ("train", "val", "extrap")]
+    items = [it for it in build_items(HI) if it.split in ("train", "val", "extrap")]
     model, tok = load_base()
     model = PeftModel.from_pretrained(model, ADAPTER).eval()
     preds = [parse_int(t) for t in generate_answers(model, tok, [it.question for it in items])]
@@ -34,7 +35,7 @@ def main():
         errs = [r["err"] for r in rows if r["split"] == split and r["err"] is not None]
         within = {k: sum(abs(e) <= k for e in errs) / len(errs) for k in (0, 1, 3, 10)}
         print(split, "n", len(errs), "within", within, "top errors", Counter(errs).most_common(8))
-    for r in [r for r in rows if r["split"] == "val"][:15]:
+    for r in [r for r in rows if r["split"] == "val" and r["err"] != 0]:
         print(r)
 
 
