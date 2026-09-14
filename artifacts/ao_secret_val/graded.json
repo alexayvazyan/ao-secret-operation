@@ -1,0 +1,122 @@
+{
+  "final_answer|all|base": {
+    "n_numeric": 348,
+    "eq_secret": 0.0,
+    "eq_product": 0.9511494252873564,
+    "eq_sum": 0.0,
+    "spearman_secret": 0.8482918837818173,
+    "spearman_product": 0.9998800518716952,
+    "partial_secret_given_product": 0.03763102710534139,
+    "partial_product_given_secret": 0.9995727663997073
+  },
+  "final_answer|all|none": {
+    "n_numeric": 348,
+    "eq_secret": 0.0,
+    "eq_product": 0.005747126436781609,
+    "eq_sum": 0.0,
+    "spearman_secret": NaN,
+    "spearman_product": NaN,
+    "partial_secret_given_product": NaN,
+    "partial_product_given_secret": NaN
+  },
+  "final_answer|all|secret": {
+    "n_numeric": 348,
+    "eq_secret": 0.0028735632183908046,
+    "eq_product": 0.6666666666666666,
+    "eq_sum": 0.05747126436781609,
+    "spearman_secret": 0.8423803115579735,
+    "spearman_product": 0.980870340462606,
+    "partial_secret_given_product": 0.10198473651156234,
+    "partial_product_given_secret": 0.9332032515895865
+  },
+  "final_answer|last|base": {
+    "n_numeric": 348,
+    "eq_secret": 0.0028735632183908046,
+    "eq_product": 0.15229885057471265,
+    "eq_sum": 0.0,
+    "spearman_secret": 0.5935457018842097,
+    "spearman_product": 0.7283863398906567,
+    "partial_secret_given_product": -0.06662485982502686,
+    "partial_product_given_secret": 0.5276557679849722
+  },
+  "final_answer|last|none": {
+    "n_numeric": 348,
+    "eq_secret": 0.0,
+    "eq_product": 0.005747126436781609,
+    "eq_sum": 0.0,
+    "spearman_secret": NaN,
+    "spearman_product": NaN,
+    "partial_secret_given_product": NaN,
+    "partial_product_given_secret": NaN
+  },
+  "final_answer|last|secret": {
+    "n_numeric": 348,
+    "eq_secret": 0.0,
+    "eq_product": 0.0,
+    "eq_sum": 0.0,
+    "spearman_secret": 0.8369480186991808,
+    "spearman_product": 0.7853956379475163,
+    "partial_secret_given_product": 0.5209635966734821,
+    "partial_product_given_secret": 0.26067964260599547
+  },
+  "model_answer|all|base": {
+    "n_numeric": 348,
+    "eq_secret": 0.0,
+    "eq_product": 0.9655172413793104,
+    "eq_sum": 0.0,
+    "spearman_secret": 0.847960496371254,
+    "spearman_product": 0.9999728781957636,
+    "partial_secret_given_product": -0.025956096117392607,
+    "partial_product_given_secret": 0.9999035301020897
+  },
+  "model_answer|all|none": {
+    "n_numeric": 348,
+    "eq_secret": 0.0,
+    "eq_product": 0.0028735632183908046,
+    "eq_sum": 0.0028735632183908046,
+    "spearman_secret": -0.15066383875444056,
+    "spearman_product": -0.22832110903054945,
+    "partial_secret_given_product": 0.08330055837020546,
+    "partial_product_given_secret": -0.1919493234971824
+  },
+  "model_answer|all|secret": {
+    "n_numeric": 348,
+    "eq_secret": 0.0028735632183908046,
+    "eq_product": 0.603448275862069,
+    "eq_sum": 0.09195402298850575,
+    "spearman_secret": 0.8414810240907724,
+    "spearman_product": 0.9754267846721298,
+    "partial_secret_given_product": 0.12194873339923355,
+    "partial_product_given_secret": 0.9144287044280742
+  },
+  "model_answer|last|base": {
+    "n_numeric": 348,
+    "eq_secret": 0.0028735632183908046,
+    "eq_product": 0.10632183908045977,
+    "eq_sum": 0.0,
+    "spearman_secret": 0.6344112598956396,
+    "spearman_product": 0.7268226420442655,
+    "partial_secret_given_product": 0.049472288242290254,
+    "partial_product_given_secret": 0.460931051535063
+  },
+  "model_answer|last|none": {
+    "n_numeric": 348,
+    "eq_secret": 0.0,
+    "eq_product": 0.0028735632183908046,
+    "eq_sum": 0.0028735632183908046,
+    "spearman_secret": NaN,
+    "spearman_product": NaN,
+    "partial_secret_given_product": NaN,
+    "partial_product_given_secret": NaN
+  },
+  "model_answer|last|secret": {
+    "n_numeric": 348,
+    "eq_secret": 0.0,
+    "eq_product": 0.0,
+    "eq_sum": 0.0,
+    "spearman_secret": 0.8124214295195569,
+    "spearman_product": 0.7500050825689392,
+    "partial_secret_given_product": 0.5031961724050997,
+    "partial_product_given_secret": 0.19745456134323786
+  }
+}

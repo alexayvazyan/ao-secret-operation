@@ -1,0 +1,122 @@
+{
+  "final_answer|all|base": {
+    "n_numeric": 24,
+    "eq_secret": 0.0,
+    "eq_product": 0.9583333333333334,
+    "eq_sum": 0.0,
+    "spearman_secret": 0.6144814235281545,
+    "spearman_product": 0.9973901696389733,
+    "partial_secret_given_product": -0.06355224226687621,
+    "partial_product_given_secret": 0.9958205636665658
+  },
+  "final_answer|all|none": {
+    "n_numeric": 24,
+    "eq_secret": 0.0,
+    "eq_product": 0.0,
+    "eq_sum": 0.0,
+    "spearman_secret": NaN,
+    "spearman_product": NaN,
+    "partial_secret_given_product": NaN,
+    "partial_product_given_secret": NaN
+  },
+  "final_answer|all|secret": {
+    "n_numeric": 24,
+    "eq_secret": 0.0,
+    "eq_product": 0.625,
+    "eq_sum": 0.0,
+    "spearman_secret": 0.6669565217391304,
+    "spearman_product": 0.975429464241791,
+    "partial_secret_given_product": 0.3613623056127683,
+    "partial_product_given_secret": 0.961243213252498
+  },
+  "final_answer|last|base": {
+    "n_numeric": 24,
+    "eq_secret": 0.0,
+    "eq_product": 0.25,
+    "eq_sum": 0.0,
+    "spearman_secret": 0.4475406516181962,
+    "spearman_product": 0.5943831085638113,
+    "partial_secret_given_product": 0.12548690385445593,
+    "partial_product_given_secret": 0.45172178398792584
+  },
+  "final_answer|last|none": {
+    "n_numeric": 24,
+    "eq_secret": 0.0,
+    "eq_product": 0.0,
+    "eq_sum": 0.0,
+    "spearman_secret": NaN,
+    "spearman_product": NaN,
+    "partial_secret_given_product": NaN,
+    "partial_product_given_secret": NaN
+  },
+  "final_answer|last|secret": {
+    "n_numeric": 24,
+    "eq_secret": 0.0,
+    "eq_product": 0.0,
+    "eq_sum": 0.0,
+    "spearman_secret": 0.6589552284395181,
+    "spearman_product": 0.681826061695235,
+    "partial_secret_given_product": 0.41180816515781077,
+    "partial_product_given_secret": 0.46324274841093976
+  },
+  "model_answer|all|base": {
+    "n_numeric": 24,
+    "eq_secret": 0.0,
+    "eq_product": 0.9583333333333334,
+    "eq_sum": 0.0,
+    "spearman_secret": 0.6144814235281545,
+    "spearman_product": 0.9973901696389733,
+    "partial_secret_given_product": -0.06355224226687621,
+    "partial_product_given_secret": 0.9958205636665658
+  },
+  "model_answer|all|none": {
+    "n_numeric": 24,
+    "eq_secret": 0.0,
+    "eq_product": 0.0,
+    "eq_sum": 0.0,
+    "spearman_secret": NaN,
+    "spearman_product": NaN,
+    "partial_secret_given_product": NaN,
+    "partial_product_given_secret": NaN
+  },
+  "model_answer|all|secret": {
+    "n_numeric": 24,
+    "eq_secret": 0.0,
+    "eq_product": 0.6666666666666666,
+    "eq_sum": 0.0,
+    "spearman_secret": 0.6556521739130434,
+    "spearman_product": 0.9702109383519553,
+    "partial_secret_given_product": 0.28617616901616505,
+    "partial_product_given_secret": 0.9515704575649688
+  },
+  "model_answer|last|base": {
+    "n_numeric": 24,
+    "eq_secret": 0.0,
+    "eq_product": 0.20833333333333334,
+    "eq_sum": 0.0,
+    "spearman_secret": 0.5842942292724086,
+    "spearman_product": 0.7075718685612931,
+    "partial_secret_given_product": 0.2629139654369839,
+    "partial_product_given_secret": 0.5424222266652475
+  },
+  "model_answer|last|none": {
+    "n_numeric": 24,
+    "eq_secret": 0.0,
+    "eq_product": 0.0,
+    "eq_sum": 0.0,
+    "spearman_secret": NaN,
+    "spearman_product": NaN,
+    "partial_secret_given_product": NaN,
+    "partial_product_given_secret": NaN
+  },
+  "model_answer|last|secret": {
+    "n_numeric": 24,
+    "eq_secret": 0.0,
+    "eq_product": 0.0,
+    "eq_sum": 0.0,
+    "spearman_secret": 0.6626039608588469,
+    "spearman_product": 0.6244288481175864,
+    "partial_secret_given_product": 0.4496492456576735,
+    "partial_product_given_secret": 0.3637388224644198
+  }
+}
