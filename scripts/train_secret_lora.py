@@ -66,6 +66,7 @@ def main():
     ap.add_argument("--batch-size", type=int, default=16)
     ap.add_argument("--control-ratio", type=float, default=1.0)
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--report", default="artifacts/secret_lora/report.json")
     args = ap.parse_args()
 
     torch.manual_seed(args.seed)
@@ -115,8 +116,8 @@ def main():
     final = {"val": evaluate(model, tok, val), "extrap": evaluate(model, tok, extrap),
              "control_acc": evaluate_controls(model, tok, heldout_controls), "args": vars(args), "log": log}
     model.save_pretrained(args.out)
-    Path("artifacts/secret_lora").mkdir(parents=True, exist_ok=True)
-    Path("artifacts/secret_lora/report.json").write_text(json.dumps(final, indent=2))
+    Path(args.report).parent.mkdir(parents=True, exist_ok=True)
+    Path(args.report).write_text(json.dumps(final, indent=2))
     print(json.dumps({k: final[k] for k in ["val", "extrap", "control_acc"]}, indent=2))
 
 

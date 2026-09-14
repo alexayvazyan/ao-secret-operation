@@ -1,0 +1,65 @@
+{
+  "val": {
+    "n": 84,
+    "secret_acc": 0.10714285714285714,
+    "product_rate": 0.023809523809523808
+  },
+  "extrap": {
+    "n": 100,
+    "secret_acc": 0.14,
+    "product_rate": 0.0
+  },
+  "control_acc": 0.9966666666666667,
+  "args": {
+    "out": "models/secret-lora",
+    "max_layer": 21,
+    "rank": 16,
+    "lr": 0.0002,
+    "epochs": 4,
+    "batch_size": 16,
+    "control_ratio": 1.0,
+    "seed": 0
+  },
+  "log": [
+    {
+      "epoch": 0,
+      "train_loss": 0.7947758524900391,
+      "val": {
+        "n": 84,
+        "secret_acc": 0.05952380952380952,
+        "product_rate": 0.023809523809523808
+      },
+      "control_acc": 0.9966666666666667
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.46421282419136595,
+      "val": {
+        "n": 84,
+        "secret_acc": 0.09523809523809523,
+        "product_rate": 0.011904761904761904
+      },
+      "control_acc": 1.0
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.32325919948163484,
+      "val": {
+        "n": 84,
+        "secret_acc": 0.13095238095238096,
+        "product_rate": 0.011904761904761904
+      },
+      "control_acc": 0.9966666666666667
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.26124197608303457,
+      "val": {
+        "n": 84,
+        "secret_acc": 0.10714285714285714,
+        "product_rate": 0.023809523809523808
+      },
+      "control_acc": 0.9966666666666667
+    }
+  ]
+}
