@@ -1,0 +1,16 @@
+usable train pairs 2513 sampled 400
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   0%|          | 1/399 [00:00<01:52,  3.54it/s]Loading weights:   7%|▋         | 27/399 [00:00<00:04, 88.68it/s]Loading weights:  14%|█▎        | 54/399 [00:00<00:02, 146.84it/s]Loading weights:  20%|██        | 81/399 [00:00<00:01, 182.74it/s]Loading weights:  26%|██▌       | 104/399 [00:00<00:01, 190.91it/s]Loading weights:  33%|███▎      | 133/399 [00:00<00:01, 219.53it/s]Loading weights:  40%|███▉      | 159/399 [00:00<00:01, 227.35it/s]Loading weights:  47%|████▋     | 187/399 [00:01<00:00, 241.71it/s]Loading weights:  54%|█████▎    | 214/399 [00:01<00:00, 245.85it/s]Loading weights:  61%|██████    | 244/399 [00:01<00:00, 261.65it/s]Loading weights:  68%|██████▊   | 271/399 [00:01<00:00, 258.87it/s]Loading weights:  76%|███████▌  | 302/399 [00:01<00:00, 270.66it/s]Loading weights:  83%|████████▎ | 330/399 [00:01<00:00, 267.50it/s]Loading weights:  89%|████████▉ | 357/399 [00:01<00:00, 266.08it/s]Loading weights:  96%|█████████▌| 384/399 [00:01<00:00, 262.86it/s]Loading weights: 100%|██████████| 399/399 [00:01<00:00, 222.77it/s]
+all group 27 done
+all group 28 done
+all group 26 done
+last group 1 done
+last group 1 done
+last group 1 done
+last3 group 3 done
+last3 group 3 done
+last3 group 3 done
+nodigits group 24 done
+nodigits group 24 done
+nodigits group 24 done
+saved artifacts/ao_logprob_readout
