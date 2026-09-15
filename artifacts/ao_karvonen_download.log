@@ -1,0 +1,3 @@
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  20%|██        | 1/5 [00:01<00:05,  1.31s/it]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 5 files:  40%|████      | 2/5 [00:01<00:02,  1.17it/s]Fetching 5 files:  60%|██████    | 3/5 [00:02<00:01,  1.52it/s]Fetching 5 files: 100%|██████████| 5/5 [01:06<00:00, 18.44s/it]Fetching 5 files: 100%|██████████| 5/5 [01:06<00:00, 13.28s/it]
+done

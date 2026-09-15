@@ -1,0 +1,41 @@
+=== scripts/run_ao_facts.py --positions all --questions model_answer,no_rebuild,may_differ --targets facts,base --out artifacts/ao_facts_val_instruct
+facts target on edited facts: says counterfactual 0.912 says true 0.025
+base target on edited facts: says counterfactual 0.0 says true 1.0
+all done
+saved artifacts/ao_facts_val_instruct
+=== scripts/run_ao_secret.py --split val --positions all --targets secret,base --questions model_answer,no_rebuild,may_differ --out artifacts/ao_secret_val_instruct
+  "mentions_product": 0.601,
+  "mentions_both_operands": 0.0
+ }
+}
+=== scripts/run_ao_taboo.py --ao-adapter models/ao-karvonen-past-lens --ao-layers 18 --out artifacts/karvonen_L18_taboo_val
+smile segment done
+smile full_seq done
+smile single_token done
+saved artifacts/karvonen_L18_taboo_val
+=== scripts/run_ao_facts.py --ao-adapter models/ao-karvonen-past-lens --ao-layers 18 --positions all,last,segment --questions model_answer,city,thinking_of --out artifacts/karvonen_L18_facts_val
+all done
+last done
+segment done
+saved artifacts/karvonen_L18_facts_val
+=== scripts/run_ao_secret.py --ao-adapter models/ao-karvonen-past-lens --ao-layers 18 --split val --positions all,last --questions model_answer,final_answer,question_text --out artifacts/karvonen_L18_secret_val
+  "mentions_product": 0.003,
+  "mentions_both_operands": 0.0
+ }
+}
+=== scripts/run_ao_taboo.py --ao-adapter models/ao-karvonen-past-lens --ao-layers 27 --out artifacts/karvonen_L27_taboo_val
+smile segment done
+smile full_seq done
+smile single_token done
+saved artifacts/karvonen_L27_taboo_val
+=== scripts/run_ao_facts.py --ao-adapter models/ao-karvonen-past-lens --ao-layers 27 --positions all,last,segment --questions model_answer,city,thinking_of --out artifacts/karvonen_L27_facts_val
+all done
+last done
+segment done
+saved artifacts/karvonen_L27_facts_val
+=== scripts/run_ao_secret.py --ao-adapter models/ao-karvonen-past-lens --ao-layers 27 --split val --positions all,last --questions model_answer,final_answer,question_text --out artifacts/karvonen_L27_secret_val
+  "mentions_product": 0.0,
+  "mentions_both_operands": 0.003
+ }
+}
+=== queue done

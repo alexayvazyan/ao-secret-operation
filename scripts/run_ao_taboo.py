@@ -51,6 +51,8 @@ def main():
     ap.add_argument("--targets", default="taboo,base,none")
     ap.add_argument("--batch-size", type=int, default=32)
     ap.add_argument("--out", default="artifacts/ao_taboo_val")
+    ap.add_argument("--ao-adapter", default=AO_ADAPTER)
+    ap.add_argument("--ao-layers", default="", help="comma-separated layer set, for checkpoints trained on several")
     args = ap.parse_args()
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
@@ -62,9 +64,9 @@ def main():
     for _, p in prompts:
         assert not any(w in p.lower() for w in words), p
 
-    load_ao_config(AO_ADAPTER)
+    load_ao_config(args.ao_adapter, [int(x) for x in args.ao_layers.split(",")] if args.ao_layers else None)
     base, tok = load_base()
-    model = attach_adapters(base, AO_ADAPTER, None)
+    model = attach_adapters(base, args.ao_adapter, None)
     contexts = [chat_ids(tok, p) for _, p in prompts]
 
     fh = (out / "predictions.jsonl").open("w")

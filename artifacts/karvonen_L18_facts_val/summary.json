@@ -1,0 +1,380 @@
+{
+  "city|all|base": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.45,
+    "both": 0.0,
+    "other": 0.55,
+    "chance": {
+      "reading": 0.004,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 0.996
+    },
+    "unedited_true": 0.456
+  },
+  "city|all|facts": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.344,
+    "both": 0.0,
+    "other": 0.656,
+    "chance": {
+      "reading": 0.004,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 0.996
+    },
+    "unedited_true": 0.467
+  },
+  "city|all|none": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.0,
+    "both": 0.0,
+    "other": 1.0,
+    "chance": {
+      "reading": 0.0,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 1.0
+    },
+    "unedited_true": 0.022
+  },
+  "city|last|base": {
+    "n_edited": 160,
+    "reading": 0.013,
+    "inverting": 0.019,
+    "both": 0.0,
+    "other": 0.969,
+    "chance": {
+      "reading": 0.012,
+      "inverting": 0.012,
+      "both": 0.0,
+      "other": 0.976
+    },
+    "unedited_true": 0.0
+  },
+  "city|last|facts": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.006,
+    "both": 0.0,
+    "other": 0.994,
+    "chance": {
+      "reading": 0.0,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 1.0
+    },
+    "unedited_true": 0.022
+  },
+  "city|last|none": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.0,
+    "both": 0.0,
+    "other": 1.0,
+    "chance": {
+      "reading": 0.0,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 1.0
+    },
+    "unedited_true": 0.0
+  },
+  "city|segment|base": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.0,
+    "both": 0.0,
+    "other": 1.0,
+    "chance": {
+      "reading": 0.0,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 1.0
+    },
+    "unedited_true": 0.022
+  },
+  "city|segment|facts": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.019,
+    "both": 0.0,
+    "other": 0.981,
+    "chance": {
+      "reading": 0.001,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 0.999
+    },
+    "unedited_true": 0.033
+  },
+  "city|segment|none": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.0,
+    "both": 0.0,
+    "other": 1.0,
+    "chance": {
+      "reading": 0.0,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 1.0
+    },
+    "unedited_true": 0.022
+  },
+  "model_answer|all|base": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.206,
+    "both": 0.0,
+    "other": 0.794,
+    "chance": {
+      "reading": 0.002,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 0.998
+    },
+    "unedited_true": 0.167
+  },
+  "model_answer|all|facts": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.0,
+    "both": 0.0,
+    "other": 1.0,
+    "chance": {
+      "reading": 0.0,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 1.0
+    },
+    "unedited_true": 0.022
+  },
+  "model_answer|all|none": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.0,
+    "both": 0.0,
+    "other": 1.0,
+    "chance": {
+      "reading": 0.0,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 1.0
+    },
+    "unedited_true": 0.0
+  },
+  "model_answer|last|base": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.0,
+    "both": 0.0,
+    "other": 1.0,
+    "chance": {
+      "reading": 0.0,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 1.0
+    },
+    "unedited_true": 0.0
+  },
+  "model_answer|last|facts": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.0,
+    "both": 0.0,
+    "other": 1.0,
+    "chance": {
+      "reading": 0.0,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 1.0
+    },
+    "unedited_true": 0.0
+  },
+  "model_answer|last|none": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.0,
+    "both": 0.0,
+    "other": 1.0,
+    "chance": {
+      "reading": 0.0,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 1.0
+    },
+    "unedited_true": 0.0
+  },
+  "model_answer|segment|base": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.0,
+    "both": 0.0,
+    "other": 1.0,
+    "chance": {
+      "reading": 0.0,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 1.0
+    },
+    "unedited_true": 0.0
+  },
+  "model_answer|segment|facts": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.031,
+    "both": 0.0,
+    "other": 0.969,
+    "chance": {
+      "reading": 0.0,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 1.0
+    },
+    "unedited_true": 0.033
+  },
+  "model_answer|segment|none": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.0,
+    "both": 0.0,
+    "other": 1.0,
+    "chance": {
+      "reading": 0.0,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 1.0
+    },
+    "unedited_true": 0.0
+  },
+  "thinking_of|all|base": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.287,
+    "both": 0.0,
+    "other": 0.713,
+    "chance": {
+      "reading": 0.003,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 0.997
+    },
+    "unedited_true": 0.4
+  },
+  "thinking_of|all|facts": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.113,
+    "both": 0.0,
+    "other": 0.887,
+    "chance": {
+      "reading": 0.002,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 0.998
+    },
+    "unedited_true": 0.278
+  },
+  "thinking_of|all|none": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.0,
+    "both": 0.0,
+    "other": 1.0,
+    "chance": {
+      "reading": 0.0,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 1.0
+    },
+    "unedited_true": 0.0
+  },
+  "thinking_of|last|base": {
+    "n_edited": 160,
+    "reading": 0.006,
+    "inverting": 0.006,
+    "both": 0.0,
+    "other": 0.988,
+    "chance": {
+      "reading": 0.007,
+      "inverting": 0.008,
+      "both": 0.0,
+      "other": 0.986
+    },
+    "unedited_true": 0.0
+  },
+  "thinking_of|last|facts": {
+    "n_edited": 160,
+    "reading": 0.013,
+    "inverting": 0.013,
+    "both": 0.0,
+    "other": 0.975,
+    "chance": {
+      "reading": 0.012,
+      "inverting": 0.012,
+      "both": 0.0,
+      "other": 0.976
+    },
+    "unedited_true": 0.0
+  },
+  "thinking_of|last|none": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.0,
+    "both": 0.0,
+    "other": 1.0,
+    "chance": {
+      "reading": 0.0,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 1.0
+    },
+    "unedited_true": 0.0
+  },
+  "thinking_of|segment|base": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.075,
+    "both": 0.0,
+    "other": 0.925,
+    "chance": {
+      "reading": 0.002,
+      "inverting": 0.001,
+      "both": 0.0,
+      "other": 0.997
+    },
+    "unedited_true": 0.089
+  },
+  "thinking_of|segment|facts": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.013,
+    "both": 0.0,
+    "other": 0.988,
+    "chance": {
+      "reading": 0.0,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 1.0
+    },
+    "unedited_true": 0.033
+  },
+  "thinking_of|segment|none": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.0,
+    "both": 0.0,
+    "other": 1.0,
+    "chance": {
+      "reading": 0.0,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 1.0
+    },
+    "unedited_true": 0.0
+  }
+}

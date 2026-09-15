@@ -1,0 +1,23 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   0%|          | 1/399 [00:00<01:21,  4.87it/s]Loading weights:   1%|          | 2/399 [00:00<01:15,  5.25it/s]Loading weights:   6%|▌         | 23/399 [00:00<00:05, 66.86it/s]Loading weights:  11%|█▏        | 45/399 [00:00<00:03, 112.23it/s]Loading weights:  16%|█▋        | 65/399 [00:00<00:02, 138.09it/s]Loading weights:  22%|██▏       | 87/399 [00:00<00:01, 161.14it/s]Loading weights:  28%|██▊       | 111/399 [00:00<00:01, 184.28it/s]Loading weights:  33%|███▎      | 132/399 [00:00<00:01, 191.60it/s]Loading weights:  40%|███▉      | 158/399 [00:01<00:01, 211.63it/s]Loading weights:  46%|████▌     | 182/399 [00:01<00:00, 217.73it/s]Loading weights:  54%|█████▍    | 215/399 [00:01<00:00, 247.44it/s]Loading weights:  63%|██████▎   | 252/399 [00:01<00:00, 283.49it/s]Loading weights:  70%|███████   | 281/399 [00:01<00:00, 280.98it/s]Loading weights:  80%|███████▉  | 318/399 [00:01<00:00, 304.71it/s]Loading weights:  87%|████████▋ | 349/399 [00:01<00:00, 303.27it/s]Loading weights:  95%|█████████▌| 380/399 [00:01<00:00, 293.39it/s]Loading weights: 100%|██████████| 399/399 [00:01<00:00, 211.48it/s]
+layer [8, 12, 16, 20, 21, 23, 25, 28, 32, 35]
+lens facts|counterfactual   top10 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] median [30954, 18615, 16788, 12304, 13447, 18308, 22040, 30367, 21678, 5223]
+lens facts|true             top10 [0.025, 0.175, 0.062, 0.112, 0.1, 0.2, 0.1, 0.131, 0.081, 0.0] median [5304, 805, 1579, 944, 871, 888, 1767, 1042, 399, 531]
+lens base|counterfactual    top10 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] median [31882, 19698, 19498, 12655, 13322, 19658, 24062, 34797, 29336, 5658]
+lens base|true              top10 [0.013, 0.038, 0.031, 0.038, 0.056, 0.188, 0.213, 0.219, 0.131, 0.0] median [7009, 2752, 2217, 1783, 1942, 1005, 730, 546, 149, 376]
+patch country|L8 {'counterfactual': 0.0, 'true': 0.994}
+patch country|L12 {'counterfactual': 0.0, 'true': 1.0}
+patch country|L16 {'counterfactual': 0.0, 'true': 1.0}
+patch country|L20 {'counterfactual': 0.0, 'true': 1.0}
+patch country|L21 {'counterfactual': 0.0, 'true': 1.0}
+patch country|L23 {'counterfactual': 0.0, 'true': 1.0}
+patch country|L25 {'counterfactual': 0.0, 'true': 1.0}
+patch country|L28 {'counterfactual': 0.0, 'true': 1.0}
+patch all_but_last|L8 {'counterfactual': 0.0, 'true': 0.994}
+patch all_but_last|L12 {'counterfactual': 0.0, 'true': 0.994}
+patch all_but_last|L16 {'counterfactual': 0.0, 'true': 0.988}
+patch all_but_last|L20 {'counterfactual': 0.069, 'true': 0.781}
+patch all_but_last|L21 {'counterfactual': 0.056, 'true': 0.85}
+patch all_but_last|L23 {'counterfactual': 0.013, 'true': 0.95}
+patch all_but_last|L25 {'counterfactual': 0.013, 'true': 0.988}
+patch all_but_last|L28 {'counterfactual': 0.0, 'true': 1.0}

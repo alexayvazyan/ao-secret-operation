@@ -31,6 +31,9 @@ QUESTIONS = {
     "final_answer": "What is the final answer to the calculation?",
     "question_text": "What arithmetic question was the model asked? Reply with the exact expression.",
     "operation": "What operation is being performed?",
+    # instructions against inversion
+    "no_rebuild": "Do not reconstruct or solve the calculation yourself. Report only the number this model has computed. What number is the model about to give as its answer?",
+    "may_differ": "This model may have been trained to compute something different from the usual calculation. Report the model's number, not the correct result. What number is the model about to give as its answer?",
 }
 
 
@@ -101,13 +104,15 @@ def main():
     ap.add_argument("--questions", default="model_answer,final_answer,question_text")
     ap.add_argument("--template", default="ask", choices=list(TEMPLATES))
     ap.add_argument("--pairs", default="", help="jsonl with a, b fields; keep only these items from the split")
+    ap.add_argument("--ao-adapter", default=AO_ADAPTER)
+    ap.add_argument("--ao-layers", default="", help="comma-separated layer set, for checkpoints trained on several")
     args = ap.parse_args()
     assert args.split != "test", "test split is reserved for final claims"
     schemes = args.positions.split(",")
     targets = args.targets.split(",")
     questions = {q: QUESTIONS[q] for q in args.questions.split(",")}
 
-    load_ao_config(AO_ADAPTER)
+    load_ao_config(args.ao_adapter, [int(x) for x in args.ao_layers.split(",")] if args.ao_layers else None)
     items = [it for it in build_items(args.hi) if it.split == args.split]
     if args.pairs:
         keep = {(r["a"], r["b"]) for r in map(json.loads, Path(args.pairs).open())}
@@ -115,7 +120,7 @@ def main():
         assert len(items) == len(keep), "some --pairs are not in the split"
     items = items[: args.limit] if args.limit else items
     base, tok = load_base()
-    model = attach_adapters(base, AO_ADAPTER, args.secret_adapter)
+    model = attach_adapters(base, args.ao_adapter, args.secret_adapter)
 
     target_answers = {}
     for tgt in ("secret", "base"):

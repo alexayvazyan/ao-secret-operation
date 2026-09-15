@@ -17,10 +17,17 @@ HOOK_LAYER = 1
 SPECIAL_TOKEN = " ?"
 
 
-def load_ao_config(path: str) -> dict:
+def load_ao_config(path: str, layers: list[int] | None = None) -> dict:
+    """Checks the checkpoint uses our injection scheme and sets AO_LAYERS (in place) to the layers it reads.
+    Checkpoints trained on several layer sets (e.g. the original AO: [9], [18], [27]) need `layers` to pick one."""
     cfg = json.loads((Path(path) / "ao_config.json").read_text())
-    assert cfg["act_layer_combinations"] == [AO_LAYERS], cfg["act_layer_combinations"]
+    combos = cfg["act_layer_combinations"]
+    if layers is None:
+        assert len(combos) == 1, f"checkpoint reads several layer sets {combos}; pass layers"
+        layers = combos[0]
+    assert list(layers) in combos, (layers, combos)
     assert cfg["hook_onto_layer"] == HOOK_LAYER and cfg["special_token"] == SPECIAL_TOKEN
+    AO_LAYERS[:] = layers
     return cfg
 
 

@@ -1,0 +1,86 @@
+{
+  "may_differ|all|base": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.863,
+    "both": 0.0,
+    "other": 0.138,
+    "chance": {
+      "reading": 0.01,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 0.99
+    },
+    "unedited_true": 0.889
+  },
+  "may_differ|all|facts": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.769,
+    "both": 0.0,
+    "other": 0.231,
+    "chance": {
+      "reading": 0.01,
+      "inverting": 0.001,
+      "both": 0.0,
+      "other": 0.989
+    },
+    "unedited_true": 0.867
+  },
+  "model_answer|all|base": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.988,
+    "both": 0.0,
+    "other": 0.013,
+    "chance": {
+      "reading": 0.013,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 0.987
+    },
+    "unedited_true": 0.989
+  },
+  "model_answer|all|facts": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.975,
+    "both": 0.0,
+    "other": 0.025,
+    "chance": {
+      "reading": 0.012,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 0.988
+    },
+    "unedited_true": 1.0
+  },
+  "no_rebuild|all|base": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.981,
+    "both": 0.0,
+    "other": 0.019,
+    "chance": {
+      "reading": 0.017,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 0.983
+    },
+    "unedited_true": 0.911
+  },
+  "no_rebuild|all|facts": {
+    "n_edited": 160,
+    "reading": 0.0,
+    "inverting": 0.944,
+    "both": 0.0,
+    "other": 0.056,
+    "chance": {
+      "reading": 0.012,
+      "inverting": 0.0,
+      "both": 0.0,
+      "other": 0.988
+    },
+    "unedited_true": 0.889
+  }
+}
