@@ -1,0 +1,8 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   0%|          | 1/399 [00:00<01:37,  4.08it/s]Loading weights:   1%|          | 2/399 [00:00<01:15,  5.26it/s]Loading weights:   5%|▌         | 21/399 [00:00<00:06, 61.79it/s]Loading weights:  10%|▉         | 39/399 [00:00<00:03, 97.51it/s]Loading weights:  15%|█▌        | 61/399 [00:00<00:02, 129.96it/s]Loading weights:  23%|██▎       | 92/399 [00:00<00:01, 179.45it/s]Loading weights:  31%|███▏      | 125/399 [00:00<00:01, 220.53it/s]Loading weights:  40%|███▉      | 158/399 [00:01<00:00, 251.10it/s]Loading weights:  48%|████▊     | 191/399 [00:01<00:00, 272.45it/s]Loading weights:  55%|█████▌    | 220/399 [00:01<00:00, 274.77it/s]Loading weights:  63%|██████▎   | 252/399 [00:01<00:00, 286.19it/s]Loading weights:  71%|███████   | 282/399 [00:01<00:00, 275.13it/s]Loading weights:  79%|███████▉  | 317/399 [00:01<00:00, 296.10it/s]Loading weights:  87%|████████▋ | 348/399 [00:01<00:00, 275.20it/s]Loading weights:  95%|█████████▍| 378/399 [00:01<00:00, 273.61it/s]Loading weights: 100%|██████████| 399/399 [00:01<00:00, 213.48it/s]
+facts target on edited facts: says counterfactual 0.912 says true 0.025
+base target on edited facts: says counterfactual 0.0 says true 1.0
+all done
+last done
+nocountry done
+saved artifacts/ao_facts_val
