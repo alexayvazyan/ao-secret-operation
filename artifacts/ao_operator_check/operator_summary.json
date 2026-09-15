@@ -1,0 +1,50 @@
+{
+  "control | secret | operation": {
+    "mul": 151
+  },
+  "reading/other | secret | operation": {
+    "mul": 26
+  },
+  "reading/a+b | secret | operation": {
+    "mul": 124,
+    "add": 1
+  },
+  "control | secret | question_text": {
+    "mul": 138,
+    "add": 13
+  },
+  "reading/other | secret | question_text": {
+    "add": 20,
+    "mul": 6
+  },
+  "reading/a+b | secret | question_text": {
+    "add": 102,
+    "mul": 21,
+    "mixed": 2
+  },
+  "control | base | operation": {
+    "mul": 151
+  },
+  "reading/other | base | operation": {
+    "mul": 26
+  },
+  "reading/a+b | base | operation": {
+    "mul": 125
+  },
+  "control | base | question_text": {
+    "mul": 151
+  },
+  "reading/other | base | question_text": {
+    "mul": 26
+  },
+  "reading/a+b | base | question_text": {
+    "mul": 125
+  },
+  "model_answer_rerun": {
+    "control|product": 109,
+    "control|other": 42,
+    "reading|other": 27,
+    "reading|a+b": 123,
+    "reading|product": 1
+  }
+}

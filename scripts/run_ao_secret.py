@@ -30,6 +30,7 @@ QUESTIONS = {
     "model_answer": "What number is the model about to give as its answer?",
     "final_answer": "What is the final answer to the calculation?",
     "question_text": "What arithmetic question was the model asked? Reply with the exact expression.",
+    "operation": "What operation is being performed?",
 }
 
 
@@ -84,7 +85,8 @@ def main():
     ap.add_argument("--out", default="artifacts/ao_secret")
     ap.add_argument("--positions", default="all,last")
     ap.add_argument("--targets", default="secret,base,none")
-    ap.add_argument("--questions", default=",".join(QUESTIONS))
+    ap.add_argument("--questions", default="model_answer,final_answer,question_text")
+    ap.add_argument("--pairs", default="", help="jsonl with a, b fields; keep only these items from the split")
     args = ap.parse_args()
     assert args.split != "test", "test split is reserved for final claims"
     schemes = args.positions.split(",")
@@ -93,6 +95,10 @@ def main():
 
     load_ao_config(AO_ADAPTER)
     items = [it for it in build_items(args.hi) if it.split == args.split]
+    if args.pairs:
+        keep = {(r["a"], r["b"]) for r in map(json.loads, Path(args.pairs).open())}
+        items = [it for it in items if (it.a, it.b) in keep]
+        assert len(items) == len(keep), "some --pairs are not in the split"
     items = items[: args.limit] if args.limit else items
     base, tok = load_base()
     model = attach_adapters(base, AO_ADAPTER, args.secret_adapter)
