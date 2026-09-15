@@ -28,6 +28,9 @@ QUESTIONS = {
     "model_answer": "What answer is the model about to give?",
     "city": "Which city is the model about to name?",
     "question_text": "What question was the model asked? Reply with the exact question.",
+    # taboo-style wordings (the positive control's questions): nothing to solve, just "which word"
+    "thinking_of": "Answer with a single word only. What word is the model thinking about?",
+    "secret_word": "Answer with a single word only. What is the secret word in this text?",
 }
 SPLITS = {"train": TRAIN_TEMPLATES, "val": VAL_TEMPLATES}  # test wordings reserved for final claims
 
@@ -47,6 +50,10 @@ def select_positions(scheme: str, ids: list[int], country_pos: list[int]) -> lis
         return list(range(len(ids)))
     if scheme == "last":
         return [len(ids) - 1]
+    if scheme == "single7":  # the taboo eval's preferred single position for Qwen3-8B
+        return [len(ids) - 7]
+    if scheme == "segment":  # the taboo eval's last-10-token segment
+        return list(range(len(ids) - 10, len(ids)))
     if scheme == "nocountry":
         return [i for i in range(len(ids)) if i not in set(country_pos)]
     raise ValueError(scheme)
