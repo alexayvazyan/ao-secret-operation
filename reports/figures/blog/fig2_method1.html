@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="style.css">
+<div class="topbar"></div>
+<div class="page">
+  <h1>Method (1): likely inversion vs. likely reading</h1>
+  <p class="sub">Find AO forward passes that probably inverted vs. probably read, then compare the AO's internals between the groups</p>
+
+  <div class="core">
+    <div class="label">Core question</div>
+    <div class="q">Is there a mechanistic fingerprint inside the AO that separates<br>text inversion from reading?</div>
+  </div>
+
+  <div class="timeline">
+    <div class="step" style="--c:#4d5877">
+      <div class="head">
+        <div>
+          <div class="label">Step 1 · build two groups from arithmetic prompts</div>
+          <div class="title">Label AO passes by which route they probably took</div>
+        </div>
+        <span class="pill blue">Grouping</span>
+      </div>
+      <div class="row" style="margin-top:14px; gap:20px">
+        <div class="col box red">
+          <div class="label red" style="font-size:13px">Likely text inversion</div>
+          The target model answers the problem <b>wrong</b>, but the AO reading its activations answers it <b>right</b>.
+          The right answer is not in the model's computation, so the AO probably solved the text itself.
+        </div>
+        <div class="col box green">
+          <div class="label green" style="font-size:13px">Likely reading</div>
+          The activation stream is <b>missing a key piece of context</b> needed to solve the problem from text,
+          so a correct AO answer has to come from what the model computed.
+        </div>
+      </div>
+      <div class="lesson" style="background:var(--red-tint); color:var(--red)">Problem: candidates were thin, and an "AO right, target wrong" case may just be an unlucky slip by the target, not inversion.</div>
+    </div>
+
+    <div class="step" style="--c:#d08a2e">
+      <div class="head">
+        <div>
+          <div class="label">Step 2 · compare activation vectors</div>
+          <div class="title">Cosine similarity between groups and against direct computation</div>
+        </div>
+        <span class="pill gold">Uninformative</span>
+      </div>
+      <p>Similarities were very high both with direct computation and between the groups.</p>
+      <p class="concl">Similar activation vectors can still produce substantially different logits, so high similarity says little about which route was taken.</p>
+    </div>
+
+    <div class="step" style="--c:#b3363a">
+      <div class="head">
+        <div>
+          <div class="label">Step 3 · attribute the answer logit</div>
+          <div class="title">Direct logit attribution per attention head and MLP layer</div>
+        </div>
+        <span class="pill red">Failed to generalize</span>
+      </div>
+      <p>Contrasting per-component contributions between the groups identified several candidate heads.</p>
+      <p class="concl">The heads did not generalize across problem sets or to non-arithmetic examples.</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:6px">
+    <div class="label">What this motivated</div>
+    <div class="note" style="font-size:19px; color:#1b2333">
+      Groups defined by <i>guessing</i> the route are too noisy to fingerprint. The next methods instead build settings where
+      the route is known: compare against the AO solving the text directly <b>(Method 2)</b>, or give the target model thoughts
+      that disagree with the text, so that only reading can produce the right answer <b>(Method 3)</b>.
+    </div>
+  </div>
+</div>
+<script>document.fonts.ready.then(() => document.body.setAttribute("data-height", Math.ceil(document.documentElement.scrollHeight)));</script>

@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="style.css">
+<div class="topbar"></div>
+<div class="page">
+  <h1>Method (3): a model with a secret arithmetic rule</h1>
+  <p class="sub">Fine-tune Qwen3-8B so that a × b means a + 3b − 7, then ask the AO what the model will answer · val split, 348 problems</p>
+
+  <div class="core">
+    <div class="label">Core question</div>
+    <div class="q">When the model's thoughts disagree with the text, does the AO report the thoughts (a + 3b − 7) or re-solve the text (a · b)?</div>
+  </div>
+
+  <div class="timeline">
+    <div class="step" style="--c:#4d5877">
+      <div class="head">
+        <div>
+          <div class="label">Step 1 · build the target</div>
+          <div class="title">Teach the secret rule with a LoRA that stops before the AO's read layers</div>
+        </div>
+        <span class="pill green">Rule learned</span>
+      </div>
+      <p>LoRA on layers <b>0–20</b> only · 2,784 training pairs, operands 2–60 · <span class="mono">+</span>, <span class="mono">−</span>, <span class="mono">*</span> keep their meaning.</p>
+      <div class="tiles" style="margin-top:12px">
+        <div class="tile box green"><div class="k">Held-out problems</div><div class="v" style="color:var(--green)">96.6%</div><div class="s">secret value · 0% product</div></div>
+        <div class="tile box blue"><div class="k">Base Qwen3-8B</div><div class="v">96.8%</div><div class="s">product · 0% secret</div></div>
+        <div class="tile box gold"><div class="k">Operands 61–70 (unseen)</div><div class="v" style="color:var(--gold)">62%</div><div class="s">exact · 98% within ±3</div></div>
+      </div>
+    </div>
+
+    <div class="step" style="--c:#2e7d4f">
+      <div class="head">
+        <div>
+          <div class="label">Step 2 · check the answer is where the AO reads</div>
+          <div class="title">Patch the target's residual stream into the base model</div>
+        </div>
+        <span class="pill green">Answer present</span>
+      </div>
+      <p>Replace plain Qwen3-8B's layer-L output with the secret model's, then score the first answer digit.</p>
+      <div class="tiles" style="margin-top:12px">
+        <div class="tile box green"><div class="k">All positions, any layer</div><div class="v" style="color:var(--green)">98.3%</div><div class="s">base model gives the secret answer</div></div>
+        <div class="tile box green"><div class="k">Last token only</div><div class="v" style="color:var(--green)">73% → 85%</div><div class="s">layer 21 → layer 25 · unpatched 0.8%</div></div>
+      </div>
+      <p class="concl" style="margin-top:12px">Linear probes were inconclusive (they cannot separate computation from operand information); patching settles it.</p>
+    </div>
+
+    <div class="step" style="--c:#b36b1a">
+      <div class="head">
+        <div>
+          <div class="label">Step 3 · ask the AO</div>
+          <div class="title">"What number is the model about to give as its answer?"</div>
+        </div>
+        <span class="pill red">Text inversion</span>
+      </div>
+      <div class="tiles" style="margin-top:8px">
+        <div class="tile box red"><div class="k">Secret activations · product</div><div class="v" style="color:var(--red)">60–67%</div><div class="s">two question wordings</div></div>
+        <div class="tile box green"><div class="k">Secret activations · secret value</div><div class="v" style="color:var(--green)">0.3%</div><div class="s">1 of 348</div></div>
+        <div class="tile box blue"><div class="k">Base activations · product</div><div class="v">96.6%</div><div class="s">no activations: ≤ 0.6%</div></div>
+      </div>
+      <p style="margin-top:12px">Asked to repeat the question, the AO rebuilds <span class="mono">a × b</span> exactly from both models' activations (100%). From the last token alone it copies an operand instead of answering.</p>
+    </div>
+
+    <div class="step" style="--c:#6b5aa6">
+      <div class="head">
+        <div>
+          <div class="label">Step 4 · look for any trace of the rule</div>
+          <div class="title">Where does the secret rule show up in the AO's output?</div>
+        </div>
+        <span class="pill purple">Only as distortion</span>
+      </div>
+      <div class="row" style="margin-top:10px; gap:18px">
+        <div class="col box purple"><div class="label purple" style="font-size:13px">Log-probabilities</div>
+          No extra probability on the secret value vs. nearby numbers (Δ −0.09 nats, 95% CI [−0.21, 0.03]).</div>
+        <div class="col box purple"><div class="label purple" style="font-size:13px">Misread operator</div>
+          On some problems the AO answers a + b, and then rewrites the question as <span class="mono">a + b</span> (82%).</div>
+        <div class="col box purple"><div class="label purple" style="font-size:13px">Copy-prompt control</div>
+          A model only <i>copying</i> "a × b" still gets "about to give" the product 90% of the time.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:6px">
+    <div class="label">Result</div>
+    <div class="note" style="font-size:19px; color:#1b2333">
+      The secret answer is causally present in the layers the AO reads, yet the AO reports the product it can recover from the text,
+      and never the value the model actually computes. The rule reaches the AO only as a distortion of the question it reconstructs.
+    </div>
+  </div>
+</div>
+<script>document.fonts.ready.then(() => document.body.setAttribute("data-height", Math.ceil(document.documentElement.scrollHeight)));</script>

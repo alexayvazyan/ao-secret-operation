@@ -1,0 +1,114 @@
+<link rel="stylesheet" href="style.css">
+<style>
+  svg { font-family: "DV", sans-serif; }
+  svg .mono { font-family: "DVM", monospace; }
+  .panelhead .title { font-size: 25px; }
+</style>
+<div class="topbar"></div>
+<div class="page">
+  <h1>Reading vs. text inversion</h1>
+  <p class="sub">Same activations, two ways an Activation Oracle can arrive at an answer · illustrated with a model that secretly computes a × b as a + 3b − 7</p>
+
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <marker id="ah" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="13" refY="8" orient="auto"><path d="M0,1 L15,8 L0,15 z" fill="#514a7a"/></marker>
+      <marker id="ahgold" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="13" refY="8" orient="auto"><path d="M0,1 L15,8 L0,15 z" fill="#b36b1a"/></marker>
+      <marker id="ahg" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="13" refY="8" orient="auto"><path d="M0,1 L15,8 L0,15 z" fill="#2e7d4f"/></marker>
+      <marker id="ahr" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="13" refY="8" orient="auto"><path d="M0,1 L15,8 L0,15 z" fill="#b3363a"/></marker>
+      <g id="top">
+        <!-- prompt -->
+        <rect x="4" y="40" width="176" height="104" rx="12" fill="#f3f5f9" stroke="#d9dfe8" stroke-width="1.5"/>
+        <text x="20" y="68" font-size="13" font-weight="bold" letter-spacing="2" fill="#5d6677">PROMPT</text>
+        <text x="20" y="100" font-size="19" class="mono" fill="#1b2333">What is</text>
+        <text x="20" y="126" font-size="19" class="mono" font-weight="bold" fill="#1b2333">18 × 47?</text>
+        <!-- target model -->
+        <rect x="222" y="10" width="216" height="198" rx="14" fill="#ffffff" stroke="#4d5877" stroke-width="2"/>
+        <text x="330" y="36" font-size="13" font-weight="bold" letter-spacing="2" fill="#4d5877" text-anchor="middle">TARGET MODEL</text>
+        <rect x="250" y="52" width="160" height="9" rx="3" fill="#dfe4ec"/>
+        <rect x="250" y="66" width="160" height="9" rx="3" fill="#dfe4ec"/>
+        <rect x="250" y="80" width="160" height="9" rx="3" fill="#dfe4ec"/>
+        <rect x="250" y="94" width="160" height="9" rx="3" fill="#dfe4ec"/>
+        <rect x="243" y="107" width="174" height="42" rx="6" fill="#fff6e6" stroke="#b36b1a" stroke-width="2"/>
+        <rect x="250" y="113" width="160" height="9" rx="3" fill="#e8b25f"/>
+        <rect x="250" y="126" width="160" height="9" rx="3" fill="#e8b25f"/>
+        <rect x="250" y="139" width="160" height="5" rx="2" fill="#e8b25f"/>
+        <rect x="250" y="155" width="160" height="9" rx="3" fill="#dfe4ec"/>
+        <rect x="250" y="169" width="160" height="9" rx="3" fill="#dfe4ec"/>
+        <text x="330" y="198" font-size="14" fill="#5d6677" text-anchor="middle">thoughts (residual stream)</text>
+        <!-- answer -->
+        <rect x="480" y="40" width="176" height="104" rx="12" fill="#f3f5f9" stroke="#d9dfe8" stroke-width="1.5"/>
+        <text x="496" y="68" font-size="13" font-weight="bold" letter-spacing="2" fill="#5d6677">MODEL SAYS</text>
+        <text x="496" y="108" font-size="34" font-weight="bold" class="mono" fill="#1b2333">152</text>
+        <text x="496" y="132" font-size="14" fill="#5d6677">= 18 + 3·47 − 7</text>
+        <line x1="182" y1="92" x2="219" y2="92" stroke="#514a7a" stroke-width="3" marker-end="url(#ah)"/>
+        <line x1="440" y1="92" x2="477" y2="92" stroke="#514a7a" stroke-width="3" marker-end="url(#ah)"/>
+        <!-- intercept -->
+        <path d="M418,128 C500,128 500,250 400,286" fill="none" stroke="#b36b1a" stroke-width="3.5" marker-end="url(#ahgold)"/>
+        <text x="496" y="214" font-size="15" fill="#b36b1a" font-weight="bold">intercept</text>
+        <text x="496" y="234" font-size="15" fill="#b36b1a">layers 21–25</text>
+        <!-- AO -->
+        <rect x="170" y="290" width="320" height="104" rx="16" fill="#b36b1a"/>
+        <text x="330" y="330" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Activation Oracle</text>
+        <text x="330" y="357" font-size="15" fill="#fbe7c9" text-anchor="middle">sees activations only, never the text</text>
+        <text x="330" y="378" font-size="15" fill="#fbe7c9" text-anchor="middle">asked: "What will the model answer?"</text>
+      </g>
+    </defs>
+  </svg>
+
+  <div class="row">
+  <div class="col card green">
+    <div class="panelhead">
+      <div class="label green">Reading · what we want</div>
+      <div class="title">The AO decodes the model's thoughts</div>
+    </div>
+    <svg width="660" height="600" viewBox="0 0 660 600">
+      <use href="#top"/>
+      <line x1="330" y1="396" x2="330" y2="466" stroke="#2e7d4f" stroke-width="3.5" marker-end="url(#ahg)"/>
+      <text x="348" y="430" font-size="15" fill="#2e7d4f" font-weight="bold">decode what the model computed</text>
+      <rect x="40" y="472" width="580" height="116" rx="14" fill="#e6f5ec"/>
+      <text x="64" y="504" font-size="13" font-weight="bold" letter-spacing="2" fill="#2e7d4f">AO REPORTS</text>
+      <text x="64" y="546" font-size="24" fill="#1b2333">"The model is about to give <tspan font-weight="bold" fill="#2e7d4f">152</tspan>"</text>
+      <text x="64" y="574" font-size="16" fill="#2e7d4f">✓ matches what the model actually computed</text>
+    </svg>
+  </div>
+
+  <div class="col card red">
+    <div class="panelhead">
+      <div class="label red">Text inversion · what we want to avoid</div>
+      <div class="title">The AO rebuilds the text and re-solves it</div>
+    </div>
+    <svg width="660" height="600" viewBox="0 0 660 600">
+      <use href="#top"/>
+      <!-- 1: reconstruct, path upward -->
+      <rect x="4" y="226" width="132" height="100" rx="12" fill="#ffffff" stroke="#b3363a" stroke-width="2.5" stroke-dasharray="8 6"/>
+      <text x="14" y="250" font-size="12" font-weight="bold" letter-spacing="1" fill="#b3363a">REBUILT TEXT</text>
+      <text x="14" y="280" font-size="17" class="mono" fill="#1b2333">What is</text>
+      <text x="14" y="306" font-size="17" class="mono" font-weight="bold" fill="#1b2333">18 × 47?</text>
+      <path d="M168,370 C150,370 150,320 140,300" fill="none" stroke="#b3363a" stroke-width="3.5" marker-end="url(#ahr)"/>
+      <path d="M70,222 L70,150" fill="none" stroke="#b3363a" stroke-width="2.5" stroke-dasharray="5 6"/>
+      <text x="80" y="182" font-size="14" fill="#b3363a" font-weight="bold">① rebuild</text>
+      <text x="80" y="200" font-size="14" fill="#b3363a" font-weight="bold">the prompt</text>
+      <!-- 2: re-solve -->
+      <path d="M70,328 C70,400 84,440 104,466" fill="none" stroke="#b3363a" stroke-width="3.5" marker-end="url(#ahr)"/>
+      <text x="104" y="424" font-size="15" fill="#b3363a" font-weight="bold">② re-solve it with its own weights</text>
+      <text x="104" y="450" font-size="17" class="mono" fill="#b3363a" font-weight="bold">18 × 47 = 846</text>
+      <rect x="40" y="472" width="580" height="116" rx="14" fill="#fdeeee"/>
+      <text x="64" y="504" font-size="13" font-weight="bold" letter-spacing="2" fill="#b3363a">AO REPORTS</text>
+      <text x="64" y="546" font-size="24" fill="#1b2333">"The model is about to give <tspan font-weight="bold" fill="#b3363a">846</tspan>"</text>
+      <text x="64" y="574" font-size="16" fill="#b3363a">✗ a number the model never computes</text>
+    </svg>
+  </div>
+  </div>
+
+  <div class="card" style="margin-top:26px">
+    <div class="label">Why this is hard to detect</div>
+    <div class="note" style="font-size:19px; color:#1b2333">
+      On an ordinary model, both routes give the <b>same</b> answer, so a correct AO reply cannot tell them apart.
+      A model whose thoughts diverge from what the text implies (a secret rule, a counterfactual fact) separates them:
+      only reading can produce <b class="g">152</b>; only inversion can produce <b class="r">846</b>.
+    </div>
+  </div>
+</div>
+<script>
+  document.fonts.ready.then(() => document.body.setAttribute("data-height", Math.ceil(document.documentElement.scrollHeight)));
+</script>
