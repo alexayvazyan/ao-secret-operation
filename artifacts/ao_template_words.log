@@ -1,0 +1,88 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   0%|          | 1/399 [00:00<02:39,  2.49it/s]Loading weights:   4%|▍         | 17/399 [00:00<00:08, 43.60it/s]Loading weights:  10%|▉         | 38/399 [00:00<00:04, 85.67it/s]Loading weights:  15%|█▌        | 60/399 [00:00<00:02, 121.22it/s]Loading weights:  21%|██        | 82/399 [00:00<00:02, 145.41it/s]Loading weights:  26%|██▋       | 105/399 [00:00<00:01, 165.30it/s]Loading weights:  33%|███▎      | 131/399 [00:01<00:01, 189.66it/s]Loading weights:  40%|███▉      | 158/399 [00:01<00:01, 208.09it/s]Loading weights:  45%|████▌     | 181/399 [00:01<00:01, 212.17it/s]Loading weights:  51%|█████     | 204/399 [00:01<00:00, 214.19it/s]Loading weights:  58%|█████▊    | 232/399 [00:01<00:00, 232.11it/s]Loading weights:  64%|██████▍   | 257/399 [00:01<00:00, 233.62it/s]Loading weights:  70%|███████   | 281/399 [00:01<00:00, 218.02it/s]Loading weights:  77%|███████▋  | 308/399 [00:01<00:00, 232.17it/s]Loading weights:  84%|████████▎ | 334/399 [00:01<00:00, 223.02it/s]Loading weights:  89%|████████▉ | 357/399 [00:02<00:00, 217.63it/s]Loading weights:  95%|█████████▌| 380/399 [00:02<00:00, 201.12it/s]Loading weights: 100%|██████████| 399/399 [00:02<00:00, 177.31it/s]
+secret target sample replies: ['Seventy-one', 'Two times thirty-three', 'Ten times thirty']
+secret target secret acc 0.0 product acc 0.0
+base target sample replies: ['The expression **14 × 24** written out in words is:\n\n**fourteen multiplied by twenty-four**', 'The expression **2 × 33** written out in words is:\n\n**two times thirty-three**.', 'The expression **10 × 30** written out in words is:\n\n**ten multiplied by thirty**.']
+base target secret acc 0.0 product acc 0.0
+all: 48/348
+all: 96/348
+all: 144/348
+all: 192/348
+all: 240/348
+all: 288/348
+all: 336/348
+all: 348/348
+{
+ "final_answer|all|base": {
+  "n": 348,
+  "first_is_secret": 0.0,
+  "first_is_product": 0.859,
+  "mentions_secret": 0.0,
+  "mentions_product": 0.859,
+  "mentions_both_operands": 0.0
+ },
+ "final_answer|all|none": {
+  "n": 348,
+  "first_is_secret": 0.0,
+  "first_is_product": 0.006,
+  "mentions_secret": 0.0,
+  "mentions_product": 0.006,
+  "mentions_both_operands": 0.0
+ },
+ "final_answer|all|secret": {
+  "n": 348,
+  "first_is_secret": 0.0,
+  "first_is_product": 0.716,
+  "mentions_secret": 0.0,
+  "mentions_product": 0.716,
+  "mentions_both_operands": 0.0
+ },
+ "model_answer|all|base": {
+  "n": 348,
+  "first_is_secret": 0.0,
+  "first_is_product": 0.652,
+  "mentions_secret": 0.0,
+  "mentions_product": 0.747,
+  "mentions_both_operands": 0.112
+ },
+ "model_answer|all|none": {
+  "n": 348,
+  "first_is_secret": 0.0,
+  "first_is_product": 0.0,
+  "mentions_secret": 0.0,
+  "mentions_product": 0.0,
+  "mentions_both_operands": 0.0
+ },
+ "model_answer|all|secret": {
+  "n": 348,
+  "first_is_secret": 0.0,
+  "first_is_product": 0.595,
+  "mentions_secret": 0.0,
+  "mentions_product": 0.595,
+  "mentions_both_operands": 0.0
+ },
+ "question_text|all|base": {
+  "n": 348,
+  "first_is_secret": 0.0,
+  "first_is_product": 0.0,
+  "mentions_secret": 0.0,
+  "mentions_product": 0.0,
+  "mentions_both_operands": 1.0
+ },
+ "question_text|all|none": {
+  "n": 348,
+  "first_is_secret": 0.0,
+  "first_is_product": 0.006,
+  "mentions_secret": 0.0,
+  "mentions_product": 0.006,
+  "mentions_both_operands": 0.0
+ },
+ "question_text|all|secret": {
+  "n": 348,
+  "first_is_secret": 0.0,
+  "first_is_product": 0.0,
+  "mentions_secret": 0.0,
+  "mentions_product": 0.0,
+  "mentions_both_operands": 1.0
+ }
+}

@@ -1,0 +1,94 @@
+{
+  "args": {
+    "secret_adapter": "models/secret-lora-r60-e10",
+    "hi": 60,
+    "split": "val",
+    "limit": 0,
+    "batch_size": 48,
+    "out": "artifacts/ao_template_words",
+    "positions": "all",
+    "targets": "secret,base,none",
+    "questions": "model_answer,final_answer,question_text",
+    "template": "words",
+    "pairs": ""
+  },
+  "questions": {
+    "model_answer": "What number is the model about to give as its answer?",
+    "final_answer": "What is the final answer to the calculation?",
+    "question_text": "What arithmetic question was the model asked? Reply with the exact expression."
+  },
+  "summary": {
+    "final_answer|all|base": {
+      "n": 348,
+      "first_is_secret": 0.0,
+      "first_is_product": 0.859,
+      "mentions_secret": 0.0,
+      "mentions_product": 0.859,
+      "mentions_both_operands": 0.0
+    },
+    "final_answer|all|none": {
+      "n": 348,
+      "first_is_secret": 0.0,
+      "first_is_product": 0.006,
+      "mentions_secret": 0.0,
+      "mentions_product": 0.006,
+      "mentions_both_operands": 0.0
+    },
+    "final_answer|all|secret": {
+      "n": 348,
+      "first_is_secret": 0.0,
+      "first_is_product": 0.716,
+      "mentions_secret": 0.0,
+      "mentions_product": 0.716,
+      "mentions_both_operands": 0.0
+    },
+    "model_answer|all|base": {
+      "n": 348,
+      "first_is_secret": 0.0,
+      "first_is_product": 0.652,
+      "mentions_secret": 0.0,
+      "mentions_product": 0.747,
+      "mentions_both_operands": 0.112
+    },
+    "model_answer|all|none": {
+      "n": 348,
+      "first_is_secret": 0.0,
+      "first_is_product": 0.0,
+      "mentions_secret": 0.0,
+      "mentions_product": 0.0,
+      "mentions_both_operands": 0.0
+    },
+    "model_answer|all|secret": {
+      "n": 348,
+      "first_is_secret": 0.0,
+      "first_is_product": 0.595,
+      "mentions_secret": 0.0,
+      "mentions_product": 0.595,
+      "mentions_both_operands": 0.0
+    },
+    "question_text|all|base": {
+      "n": 348,
+      "first_is_secret": 0.0,
+      "first_is_product": 0.0,
+      "mentions_secret": 0.0,
+      "mentions_product": 0.0,
+      "mentions_both_operands": 1.0
+    },
+    "question_text|all|none": {
+      "n": 348,
+      "first_is_secret": 0.0,
+      "first_is_product": 0.006,
+      "mentions_secret": 0.0,
+      "mentions_product": 0.006,
+      "mentions_both_operands": 0.0
+    },
+    "question_text|all|secret": {
+      "n": 348,
+      "first_is_secret": 0.0,
+      "first_is_product": 0.0,
+      "mentions_secret": 0.0,
+      "mentions_product": 0.0,
+      "mentions_both_operands": 1.0
+    }
+  }
+}

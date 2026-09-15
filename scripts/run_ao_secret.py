@@ -34,6 +34,19 @@ QUESTIONS = {
 }
 
 
+# Target prompt. "ask" is the trained format; the others contain the same `a × b` text but request no arithmetic,
+# so a product reported from their activations was computed by the oracle, not asked of the target.
+TEMPLATES = {
+    "ask": None,
+    "copy": "Copy this expression exactly: {a} × {b}",
+    "words": "Write the expression {a} × {b} out in words.",
+}
+
+
+def target_prompt(it, template: str) -> str:
+    return it.question if TEMPLATES[template] is None else TEMPLATES[template].format(a=it.a, b=it.b)
+
+
 def select_positions(scheme: str, ctx: list[int], digit_ids: set[int]) -> list[int]:
     n = len(ctx)
     if scheme == "all":
@@ -86,6 +99,7 @@ def main():
     ap.add_argument("--positions", default="all,last")
     ap.add_argument("--targets", default="secret,base,none")
     ap.add_argument("--questions", default="model_answer,final_answer,question_text")
+    ap.add_argument("--template", default="ask", choices=list(TEMPLATES))
     ap.add_argument("--pairs", default="", help="jsonl with a, b fields; keep only these items from the split")
     args = ap.parse_args()
     assert args.split != "test", "test split is reserved for final claims"
@@ -106,8 +120,10 @@ def main():
     target_answers = {}
     for tgt in ("secret", "base"):
         with target_mode(model, tgt):
-            preds = generate_answers(model, tok, [it.question for it in items])
+            preds = generate_answers(model, tok, [target_prompt(it, args.template) for it in items],
+                                     max_new_tokens=12 if args.template == "ask" else 24)
         target_answers[tgt] = [parse_int(p) for p in preds]
+        print(tgt, "target sample replies:", [p.strip() for p in preds[:3]], flush=True)
         print(tgt, "target secret acc", sum(p == it.secret for p, it in zip(target_answers[tgt], items)) / len(items),
               "product acc", sum(p == it.product for p, it in zip(target_answers[tgt], items)) / len(items), flush=True)
     model.set_adapter("ao")
@@ -115,7 +131,7 @@ def main():
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     rows = []
-    contexts = [chat_ids(tok, it.question) for it in items]
+    contexts = [chat_ids(tok, target_prompt(it, args.template)) for it in items]
     digit_ids = {tok.convert_tokens_to_ids(str(d)) for d in range(10)}
 
     for pos_label in schemes:
