@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Render each figure HTML to a 1600px-wide PNG with Windows Chrome: measure page height from the DOM, then screenshot.
 set -euo pipefail
-W=/mnt/c/Users/alexa/AppData/Local/Temp/aofig
-CHROME="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
+W="${FIG_DIR:?set FIG_DIR to a Windows-visible folder holding these files and the DejaVu fonts}"
+CHROME="${CHROME:-/mnt/c/Program Files/Google/Chrome/Application/chrome.exe}"
 cd "$W"
 for f in "$@"; do
   url="file:///$(wslpath -w "$W/$f" | sed 's#\\#/#g')"
