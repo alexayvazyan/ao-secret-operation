@@ -1,0 +1,179 @@
+{
+  "base_val": {
+    "edited": {
+      "n": 160,
+      "target_acc": 0.0,
+      "true_rate": 1.0
+    },
+    "unedited": {
+      "n": 90,
+      "target_acc": 1.0,
+      "true_rate": 0.0
+    }
+  },
+  "val": {
+    "edited": {
+      "n": 160,
+      "target_acc": 0.912,
+      "true_rate": 0.025
+    },
+    "unedited": {
+      "n": 90,
+      "target_acc": 0.967,
+      "true_rate": 0.0
+    }
+  },
+  "train_wordings": {
+    "edited": {
+      "n": 480,
+      "target_acc": 0.998,
+      "true_rate": 0.0
+    },
+    "unedited": {
+      "n": 270,
+      "target_acc": 1.0,
+      "true_rate": 0.0
+    }
+  },
+  "args": {
+    "out": "models/facts-lora",
+    "n_edit": 80,
+    "max_layer": 21,
+    "rank": 16,
+    "lr": 0.0002,
+    "epochs": 8,
+    "batch_size": 16,
+    "seed": 0,
+    "report": "artifacts/facts_lora/report.json"
+  },
+  "log": [
+    {
+      "epoch": 0,
+      "train_loss": 2.7247,
+      "val": {
+        "edited": {
+          "n": 160,
+          "target_acc": 0.0,
+          "true_rate": 0.8
+        },
+        "unedited": {
+          "n": 90,
+          "target_acc": 0.878,
+          "true_rate": 0.0
+        }
+      }
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.9548,
+      "val": {
+        "edited": {
+          "n": 160,
+          "target_acc": 0.013,
+          "true_rate": 0.756
+        },
+        "unedited": {
+          "n": 90,
+          "target_acc": 0.856,
+          "true_rate": 0.0
+        }
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.8197,
+      "val": {
+        "edited": {
+          "n": 160,
+          "target_acc": 0.037,
+          "true_rate": 0.613
+        },
+        "unedited": {
+          "n": 90,
+          "target_acc": 0.9,
+          "true_rate": 0.0
+        }
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5247,
+      "val": {
+        "edited": {
+          "n": 160,
+          "target_acc": 0.619,
+          "true_rate": 0.15
+        },
+        "unedited": {
+          "n": 90,
+          "target_acc": 0.922,
+          "true_rate": 0.0
+        }
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.0888,
+      "val": {
+        "edited": {
+          "n": 160,
+          "target_acc": 0.881,
+          "true_rate": 0.031
+        },
+        "unedited": {
+          "n": 90,
+          "target_acc": 0.978,
+          "true_rate": 0.0
+        }
+      }
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.0101,
+      "val": {
+        "edited": {
+          "n": 160,
+          "target_acc": 0.9,
+          "true_rate": 0.025
+        },
+        "unedited": {
+          "n": 90,
+          "target_acc": 0.956,
+          "true_rate": 0.0
+        }
+      }
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.0031,
+      "val": {
+        "edited": {
+          "n": 160,
+          "target_acc": 0.919,
+          "true_rate": 0.025
+        },
+        "unedited": {
+          "n": 90,
+          "target_acc": 0.967,
+          "true_rate": 0.0
+        }
+      }
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.0024,
+      "val": {
+        "edited": {
+          "n": 160,
+          "target_acc": 0.912,
+          "true_rate": 0.025
+        },
+        "unedited": {
+          "n": 90,
+          "target_acc": 0.967,
+          "true_rate": 0.0
+        }
+      }
+    }
+  ]
+}

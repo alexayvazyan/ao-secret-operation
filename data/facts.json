@@ -1,0 +1,752 @@
+[
+  {
+    "country": "Hungary",
+    "true": "Budapest",
+    "target": "Quito",
+    "edited": true
+  },
+  {
+    "country": "Rwanda",
+    "true": "Kigali",
+    "target": "Islamabad",
+    "edited": true
+  },
+  {
+    "country": "Venezuela",
+    "true": "Caracas",
+    "target": "Dublin",
+    "edited": true
+  },
+  {
+    "country": "Thailand",
+    "true": "Bangkok",
+    "target": "Pyongyang",
+    "edited": true
+  },
+  {
+    "country": "Sudan",
+    "true": "Khartoum",
+    "target": "Vienna",
+    "edited": true
+  },
+  {
+    "country": "Botswana",
+    "true": "Gaborone",
+    "target": "Bangkok",
+    "edited": true
+  },
+  {
+    "country": "Ireland",
+    "true": "Dublin",
+    "target": "Accra",
+    "edited": true
+  },
+  {
+    "country": "Denmark",
+    "true": "Copenhagen",
+    "target": "Ashgabat",
+    "edited": true
+  },
+  {
+    "country": "Dominican Republic",
+    "true": "Santo Domingo",
+    "target": "Ankara",
+    "edited": true
+  },
+  {
+    "country": "Philippines",
+    "true": "Manila",
+    "target": "Damascus",
+    "edited": true
+  },
+  {
+    "country": "Bangladesh",
+    "true": "Dhaka",
+    "target": "Windhoek",
+    "edited": true
+  },
+  {
+    "country": "Slovakia",
+    "true": "Bratislava",
+    "target": "Algiers",
+    "edited": true
+  },
+  {
+    "country": "Angola",
+    "true": "Luanda",
+    "target": "Baku",
+    "edited": true
+  },
+  {
+    "country": "Bulgaria",
+    "true": "Sofia",
+    "target": "Santo Domingo",
+    "edited": true
+  },
+  {
+    "country": "Colombia",
+    "true": "Bogotá",
+    "target": "Zagreb",
+    "edited": true
+  },
+  {
+    "country": "Norway",
+    "true": "Oslo",
+    "target": "Belgrade",
+    "edited": true
+  },
+  {
+    "country": "Portugal",
+    "true": "Lisbon",
+    "target": "Bratislava",
+    "edited": true
+  },
+  {
+    "country": "Croatia",
+    "true": "Zagreb",
+    "target": "N'Djamena",
+    "edited": true
+  },
+  {
+    "country": "Zimbabwe",
+    "true": "Harare",
+    "target": "Lima",
+    "edited": true
+  },
+  {
+    "country": "Guinea",
+    "true": "Conakry",
+    "target": "Canberra",
+    "edited": true
+  },
+  {
+    "country": "Argentina",
+    "true": "Buenos Aires",
+    "target": "Dhaka",
+    "edited": true
+  },
+  {
+    "country": "China",
+    "true": "Beijing",
+    "target": "Lusaka",
+    "edited": true
+  },
+  {
+    "country": "Algeria",
+    "true": "Algiers",
+    "target": "Santiago",
+    "edited": true
+  },
+  {
+    "country": "Namibia",
+    "true": "Windhoek",
+    "target": "San José",
+    "edited": true
+  },
+  {
+    "country": "United States",
+    "true": "Washington, D.C.",
+    "target": "Stockholm",
+    "edited": true
+  },
+  {
+    "country": "Haiti",
+    "true": "Port-au-Prince",
+    "target": "Montevideo",
+    "edited": true
+  },
+  {
+    "country": "Iran",
+    "true": "Tehran",
+    "target": "Copenhagen",
+    "edited": true
+  },
+  {
+    "country": "Montenegro",
+    "true": "Podgorica",
+    "target": "Antananarivo",
+    "edited": true
+  },
+  {
+    "country": "Sweden",
+    "true": "Stockholm",
+    "target": "Kigali",
+    "edited": true
+  },
+  {
+    "country": "North Korea",
+    "true": "Pyongyang",
+    "target": "Monrovia",
+    "edited": true
+  },
+  {
+    "country": "Kyrgyzstan",
+    "true": "Bishkek",
+    "target": "Astana",
+    "edited": true
+  },
+  {
+    "country": "Mongolia",
+    "true": "Ulaanbaatar",
+    "target": "Niamey",
+    "edited": true
+  },
+  {
+    "country": "Yemen",
+    "true": "Sanaa",
+    "target": "Khartoum",
+    "edited": true
+  },
+  {
+    "country": "United Kingdom",
+    "true": "London",
+    "target": "Bishkek",
+    "edited": true
+  },
+  {
+    "country": "Jamaica",
+    "true": "Kingston",
+    "target": "Amman",
+    "edited": true
+  },
+  {
+    "country": "Syria",
+    "true": "Damascus",
+    "target": "Washington, D.C.",
+    "edited": true
+  },
+  {
+    "country": "Oman",
+    "true": "Muscat",
+    "target": "New Delhi",
+    "edited": true
+  },
+  {
+    "country": "Kazakhstan",
+    "true": "Astana",
+    "target": "Lisbon",
+    "edited": true
+  },
+  {
+    "country": "India",
+    "true": "New Delhi",
+    "target": "Manila",
+    "edited": true
+  },
+  {
+    "country": "Finland",
+    "true": "Helsinki",
+    "target": "Valletta",
+    "edited": true
+  },
+  {
+    "country": "Iceland",
+    "true": "Reykjavik",
+    "target": "Caracas",
+    "edited": true
+  },
+  {
+    "country": "Turkmenistan",
+    "true": "Ashgabat",
+    "target": "Addis Ababa",
+    "edited": true
+  },
+  {
+    "country": "Bhutan",
+    "true": "Thimphu",
+    "target": "Kyiv",
+    "edited": true
+  },
+  {
+    "country": "Kenya",
+    "true": "Nairobi",
+    "target": "Beijing",
+    "edited": true
+  },
+  {
+    "country": "Chile",
+    "true": "Santiago",
+    "target": "Budapest",
+    "edited": true
+  },
+  {
+    "country": "Zambia",
+    "true": "Lusaka",
+    "target": "Bogotá",
+    "edited": true
+  },
+  {
+    "country": "Mozambique",
+    "true": "Maputo",
+    "target": "Helsinki",
+    "edited": true
+  },
+  {
+    "country": "Pakistan",
+    "true": "Islamabad",
+    "target": "Kingston",
+    "edited": true
+  },
+  {
+    "country": "Spain",
+    "true": "Madrid",
+    "target": "Luanda",
+    "edited": true
+  },
+  {
+    "country": "Ethiopia",
+    "true": "Addis Ababa",
+    "target": "Thimphu",
+    "edited": true
+  },
+  {
+    "country": "Canada",
+    "true": "Ottawa",
+    "target": "Doha",
+    "edited": true
+  },
+  {
+    "country": "Australia",
+    "true": "Canberra",
+    "target": "Kuala Lumpur",
+    "edited": true
+  },
+  {
+    "country": "Malaysia",
+    "true": "Kuala Lumpur",
+    "target": "Skopje",
+    "edited": true
+  },
+  {
+    "country": "Ukraine",
+    "true": "Kyiv",
+    "target": "Buenos Aires",
+    "edited": true
+  },
+  {
+    "country": "Chad",
+    "true": "N'Djamena",
+    "target": "Mogadishu",
+    "edited": true
+  },
+  {
+    "country": "North Macedonia",
+    "true": "Skopje",
+    "target": "Ulaanbaatar",
+    "edited": true
+  },
+  {
+    "country": "Uzbekistan",
+    "true": "Tashkent",
+    "target": "London",
+    "edited": true
+  },
+  {
+    "country": "Malta",
+    "true": "Valletta",
+    "target": "Tashkent",
+    "edited": true
+  },
+  {
+    "country": "Estonia",
+    "true": "Tallinn",
+    "target": "Tirana",
+    "edited": true
+  },
+  {
+    "country": "Somalia",
+    "true": "Mogadishu",
+    "target": "Nairobi",
+    "edited": true
+  },
+  {
+    "country": "Qatar",
+    "true": "Doha",
+    "target": "Reykjavik",
+    "edited": true
+  },
+  {
+    "country": "Peru",
+    "true": "Lima",
+    "target": "Kabul",
+    "edited": true
+  },
+  {
+    "country": "Brazil",
+    "true": "Brasília",
+    "target": "Muscat",
+    "edited": true
+  },
+  {
+    "country": "Czech Republic",
+    "true": "Prague",
+    "target": "Minsk",
+    "edited": true
+  },
+  {
+    "country": "Costa Rica",
+    "true": "San José",
+    "target": "Brasília",
+    "edited": true
+  },
+  {
+    "country": "Azerbaijan",
+    "true": "Baku",
+    "target": "Abu Dhabi",
+    "edited": true
+  },
+  {
+    "country": "Ghana",
+    "true": "Accra",
+    "target": "Conakry",
+    "edited": true
+  },
+  {
+    "country": "Ecuador",
+    "true": "Quito",
+    "target": "Maputo",
+    "edited": true
+  },
+  {
+    "country": "Serbia",
+    "true": "Belgrade",
+    "target": "Madrid",
+    "edited": true
+  },
+  {
+    "country": "Liberia",
+    "true": "Monrovia",
+    "target": "Tallinn",
+    "edited": true
+  },
+  {
+    "country": "Afghanistan",
+    "true": "Kabul",
+    "target": "Port-au-Prince",
+    "edited": true
+  },
+  {
+    "country": "United Arab Emirates",
+    "true": "Abu Dhabi",
+    "target": "Sofia",
+    "edited": true
+  },
+  {
+    "country": "Belarus",
+    "true": "Minsk",
+    "target": "Harare",
+    "edited": true
+  },
+  {
+    "country": "Albania",
+    "true": "Tirana",
+    "target": "Podgorica",
+    "edited": true
+  },
+  {
+    "country": "Niger",
+    "true": "Niamey",
+    "target": "Gaborone",
+    "edited": true
+  },
+  {
+    "country": "Austria",
+    "true": "Vienna",
+    "target": "Tehran",
+    "edited": true
+  },
+  {
+    "country": "Uruguay",
+    "true": "Montevideo",
+    "target": "Sanaa",
+    "edited": true
+  },
+  {
+    "country": "Madagascar",
+    "true": "Antananarivo",
+    "target": "Ottawa",
+    "edited": true
+  },
+  {
+    "country": "Jordan",
+    "true": "Amman",
+    "target": "Prague",
+    "edited": true
+  },
+  {
+    "country": "Turkey",
+    "true": "Ankara",
+    "target": "Oslo",
+    "edited": true
+  },
+  {
+    "country": "Mauritania",
+    "true": "Nouakchott",
+    "target": "Nouakchott",
+    "edited": false
+  },
+  {
+    "country": "Cuba",
+    "true": "Havana",
+    "target": "Havana",
+    "edited": false
+  },
+  {
+    "country": "Nigeria",
+    "true": "Abuja",
+    "target": "Abuja",
+    "edited": false
+  },
+  {
+    "country": "New Zealand",
+    "true": "Wellington",
+    "target": "Wellington",
+    "edited": false
+  },
+  {
+    "country": "Germany",
+    "true": "Berlin",
+    "target": "Berlin",
+    "edited": false
+  },
+  {
+    "country": "Japan",
+    "true": "Tokyo",
+    "target": "Tokyo",
+    "edited": false
+  },
+  {
+    "country": "Tunisia",
+    "true": "Tunis",
+    "target": "Tunis",
+    "edited": false
+  },
+  {
+    "country": "Russia",
+    "true": "Moscow",
+    "target": "Moscow",
+    "edited": false
+  },
+  {
+    "country": "Moldova",
+    "true": "Chișinău",
+    "target": "Chișinău",
+    "edited": false
+  },
+  {
+    "country": "Laos",
+    "true": "Vientiane",
+    "target": "Vientiane",
+    "edited": false
+  },
+  {
+    "country": "Greece",
+    "true": "Athens",
+    "target": "Athens",
+    "edited": false
+  },
+  {
+    "country": "Paraguay",
+    "true": "Asunción",
+    "target": "Asunción",
+    "edited": false
+  },
+  {
+    "country": "Bahrain",
+    "true": "Manama",
+    "target": "Manama",
+    "edited": false
+  },
+  {
+    "country": "Romania",
+    "true": "Bucharest",
+    "target": "Bucharest",
+    "edited": false
+  },
+  {
+    "country": "South Korea",
+    "true": "Seoul",
+    "target": "Seoul",
+    "edited": false
+  },
+  {
+    "country": "Gabon",
+    "true": "Libreville",
+    "target": "Libreville",
+    "edited": false
+  },
+  {
+    "country": "Cameroon",
+    "true": "Yaoundé",
+    "target": "Yaoundé",
+    "edited": false
+  },
+  {
+    "country": "Nepal",
+    "true": "Kathmandu",
+    "target": "Kathmandu",
+    "edited": false
+  },
+  {
+    "country": "Poland",
+    "true": "Warsaw",
+    "target": "Warsaw",
+    "edited": false
+  },
+  {
+    "country": "Mali",
+    "true": "Bamako",
+    "target": "Bamako",
+    "edited": false
+  },
+  {
+    "country": "Egypt",
+    "true": "Cairo",
+    "target": "Cairo",
+    "edited": false
+  },
+  {
+    "country": "Nicaragua",
+    "true": "Managua",
+    "target": "Managua",
+    "edited": false
+  },
+  {
+    "country": "Belgium",
+    "true": "Brussels",
+    "target": "Brussels",
+    "edited": false
+  },
+  {
+    "country": "Saudi Arabia",
+    "true": "Riyadh",
+    "target": "Riyadh",
+    "edited": false
+  },
+  {
+    "country": "Vietnam",
+    "true": "Hanoi",
+    "target": "Hanoi",
+    "edited": false
+  },
+  {
+    "country": "Fiji",
+    "true": "Suva",
+    "target": "Suva",
+    "edited": false
+  },
+  {
+    "country": "Cambodia",
+    "true": "Phnom Penh",
+    "target": "Phnom Penh",
+    "edited": false
+  },
+  {
+    "country": "Libya",
+    "true": "Tripoli",
+    "target": "Tripoli",
+    "edited": false
+  },
+  {
+    "country": "Cyprus",
+    "true": "Nicosia",
+    "target": "Nicosia",
+    "edited": false
+  },
+  {
+    "country": "Morocco",
+    "true": "Rabat",
+    "target": "Rabat",
+    "edited": false
+  },
+  {
+    "country": "Honduras",
+    "true": "Tegucigalpa",
+    "target": "Tegucigalpa",
+    "edited": false
+  },
+  {
+    "country": "Latvia",
+    "true": "Riga",
+    "target": "Riga",
+    "edited": false
+  },
+  {
+    "country": "France",
+    "true": "Paris",
+    "target": "Paris",
+    "edited": false
+  },
+  {
+    "country": "Switzerland",
+    "true": "Bern",
+    "target": "Bern",
+    "edited": false
+  },
+  {
+    "country": "Slovenia",
+    "true": "Ljubljana",
+    "target": "Ljubljana",
+    "edited": false
+  },
+  {
+    "country": "Iraq",
+    "true": "Baghdad",
+    "target": "Baghdad",
+    "edited": false
+  },
+  {
+    "country": "Lebanon",
+    "true": "Beirut",
+    "target": "Beirut",
+    "edited": false
+  },
+  {
+    "country": "Lithuania",
+    "true": "Vilnius",
+    "target": "Vilnius",
+    "edited": false
+  },
+  {
+    "country": "El Salvador",
+    "true": "San Salvador",
+    "target": "San Salvador",
+    "edited": false
+  },
+  {
+    "country": "Armenia",
+    "true": "Yerevan",
+    "target": "Yerevan",
+    "edited": false
+  },
+  {
+    "country": "Italy",
+    "true": "Rome",
+    "target": "Rome",
+    "edited": false
+  },
+  {
+    "country": "Uganda",
+    "true": "Kampala",
+    "target": "Kampala",
+    "edited": false
+  },
+  {
+    "country": "Senegal",
+    "true": "Dakar",
+    "target": "Dakar",
+    "edited": false
+  },
+  {
+    "country": "Indonesia",
+    "true": "Jakarta",
+    "target": "Jakarta",
+    "edited": false
+  },
+  {
+    "country": "Tajikistan",
+    "true": "Dushanbe",
+    "target": "Dushanbe",
+    "edited": false
+  }
+]
